@@ -1,0 +1,11 @@
+[
+    {
+        "key": "processes",
+        "value": {
+            "string[]": [
+                "/var/lib/apd_ucm/sample/swclSample/applicationSample/exec1"
+            ]
+        },
+        "checksum": 870226170
+    }
+]

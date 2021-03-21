@@ -1,0 +1,92 @@
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage{dirtree}
+\begin{document}
+\thispagestyle{empty}% Reset page style to 'empty'
+\dirtree{%
+.1 /.
+%.2 bin\DTcomment{base swcl A/B read-only}.
+%.2 boot\DTcomment{base swcl A/B read-only}.
+%.2 dev\DTcomment{devtmpfs}.
+%.2 etc\DTcomment{mounted to persistent storage?}.
+%.2 home.
+%.2 lib\DTcomment{base swcl A/B read-only}.
+%.2 media.
+%.2 mnt.
+%.3 persistent\DTcomment{mounted to persistent storage?}.
+%.2 opt.
+%.3 access\_manager\DTcomment{base swcl A/B read-only}.
+%.3 [...].\DTcomment{other demos, FCs, base swcl A/B read-only}.
+%.3 ara\_dlt\_daemon\DTcomment{base swcl A/B read-only}.
+%.3 ara\_dropbear\DTcomment{base swcl A/B read-only}.
+%.3 ara\_getty\DTcomment{base swcl A/B read-only}.
+%.3 ara\_syslogd\DTcomment{base swcl A/B read-only}.
+%.3 ara\_vsomeipd\DTcomment{base swcl A/B read-only}.
+%.3 crossfuncreqs\DTcomment{base swcl A/B read-only}.
+%.3 DiagnosticManager\DTcomment{base swcl A/B read-only}.
+%.3 emo-integration-test\DTcomment{base swcl A/B read-only}.
+%.3 filesys\_init\DTcomment{base swcl A/B read-only}.
+%.3 machine\_state\_manager\DTcomment{base swcl A/B read-only}.
+%.3 network\_init\DTcomment{base swcl A/B read-only}.
+%.3 package\_manager\DTcomment{base swcl A/B read-only}.
+%.3 seedkey\DTcomment{base swcl A/B read-only}.
+%.3 system\_restart\DTcomment{base swcl A/B read-only}.
+%.3 system\_shutdown\DTcomment{base swcl A/B read-only}.
+%.2 proc\DTcomment{procfs}.
+%.2 run\DTcomment{tmpfs}.
+%.2 sbin\DTcomment{base swcl A/B read-only}.
+%.2 sys\DTcomment{sysfs}.
+%.2 tmp\DTcomment{tmpfs}.
+%.2 usr\DTcomment{base swcl A/B read-only}.
+.2 var.
+.3 lib.
+.4 apd\_ucm.
+.5 PROCESSES.json -> PROCESSES\_N+1.json\DTcomment{link to active}.
+.5 PROCESSES\_N.json\DTcomment{process list version N}.
+.5 PROCESSES\_N+1.json\DTcomment{process list version N+1}.
+.5 swcl\_a\DTcomment{updated}.
+.6 1.0.0.3.\DTcomment{previous version}.
+.7 application\_a1.
+.8 process1.
+.9 bin.
+.10 app.
+.9 etc.
+.10 MANIFEST.json\DTcomment{manifest for process}.
+.9 var.
+.10 kvsdatabase.json\DTcomment{persistency}.
+.7 SCWL\_MANIFEST.json.
+.7 SHA256SUMS.\DTcomment{consistency information}.
+.6 1.0.0.4.\DTcomment{updated version}.
+.7 application\_a1.
+.8 process1.
+.9 bin.
+.10 app.
+.9 etc.
+.10 MANIFEST.json\DTcomment{manifest for process}.
+.9 var.
+.10 kvsdatabase.json\DTcomment{persistency, hardlinked?}.
+.7 SCWL\_MANIFEST.json.
+.7 SHA256SUMS.\DTcomment{consistency information}.
+.5 swcl\_b\DTcomment{removed}.
+.6 1.0.4.0.
+.7 application\_b1.
+.8 process1.
+.9 bin.
+.10 app.
+.9 etc.
+.10 MANIFEST.json\DTcomment{manifest for process}.
+.9 var\DTcomment{persistency empty}.
+.7 SCWL\_MANIFEST.json.
+.7 SHA256SUMS.\DTcomment{consistency information}.
+.5 swcl\_c\DTcomment{added}.
+.6 1.0.0.0.
+.7 application\_c1.
+.8 process1.
+.9 bin.
+.10 app.
+.9 etc.
+.10 MANIFEST.json\DTcomment{manifest for process}.
+.9 var\DTcomment{persistency empty}.
+.7 SCWL\_MANIFEST.json.
+.7 SHA256SUMS.\DTcomment{consistency information}.
+}
+\end{document}

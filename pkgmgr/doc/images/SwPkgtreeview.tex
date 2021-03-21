@@ -1,0 +1,33 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{dirtree}
+\begin{document}
+\thispagestyle{empty}% Reset page style to 'empty'
+\dirtree{%
+.1 /.
+.2 SWPKG\_MANIFEST.json\DTcomment{package manifest, first item}.
+.2 SWCL\_MANIFEST.json\DTcomment{cluster manifest, second item}.
+.2 appA/\DTcomment{application directories following afterwards}.
+.3 exec1/.
+.4 bin/.
+.5 app\DTcomment{executable binary}.
+.4 etc/.
+.5 MANIFEST.json\DTcomment{executable manifest}.
+.4 var/.
+.5 kvsdatabase.json\DTcomment{executable persistency}.
+.3 exec2/.
+.4 bin/.
+.5 app\DTcomment{executable binary}.
+.4 etc/.
+.5 MANIFEST.json\DTcomment{executable manifest}.
+.4 var/.
+.5 kvsdatabase.json\DTcomment{executable persistency}.
+.2 appB/.
+.3 exec1/.
+.4 bin/.
+.5 app\DTcomment{executable binary}.
+.4 etc/.
+.5 MANIFEST.json\DTcomment{executable manifest}.
+.4 var/.
+.5 kvsdatabase.json\DTcomment{executable persistency}.
+}
+\end{document}

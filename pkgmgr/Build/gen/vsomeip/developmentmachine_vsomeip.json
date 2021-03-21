@@ -1,0 +1,59 @@
+{
+    "unicast" : "192.168.7.2",
+    "netmask" : "255.255.255.0",
+    "logging" :
+    {
+        "level" : "debug",
+        "console" : "true",
+        "file" : { "enable" : "false", "path" : "/var/log/vsomeip.log" },
+        "dlt" : "true"
+    },
+    "applications" :
+    [
+        {
+            "name": "package_manager",
+            "id": "0xad8"
+        }
+    ],
+    "services" :
+    [
+        {
+            "service" : "0x275",
+            "instance" : "0x33c",
+            "unreliable" : "5000",
+            "events" :
+            [
+                {
+                    "event" : "0xa0f6",
+                    "is_field" : "true",
+                    "is_reliable" : "true"
+                }
+            ],
+            "eventgroups" :
+            [
+                {
+                    "eventgroup" : "0xad74",
+                    "events" :
+                    [
+                            "0xa0f6"
+                    ]
+                }
+            ]
+        }
+    ],
+    "routing" : "vsomeipd",
+    "service-discovery" :
+    {
+        "enable" : "true",
+        "multicast" : "224.224.224.245",
+        "port" : "30491",
+        "initial_delay_min" : "10",
+        "initial_delay_max" : "100",
+        "repetitions_base_delay" : "200",
+        "repetitions_max" : "3",
+        "ttl" : "10",
+        "cyclic_offer_delay" : "2000",
+        "request_response_delay" : "1500",
+        "protocol" : "udp"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "actionType": "Remove",
+    "activationAction": "ApplicationRestart",
+    "category": "examplePACKAGE",
+    "compressedSoftwarePackageSize": "1234",
+    "diagnosticAddress": "17473",
+    "isDeltaPackage": "false",
+    "maxUCMSupportedVersion": "1.0.0_0",
+    "minUCMSupportedVersion": "1.0.0_0",
+    "packagerID": "1347111236",
+    "shortName": "SWP_TEST1_REM",
+    "typeApproval": "None",
+    "ucmIdentifier": "16722",
+    "uncompressedSoftwarePackageSize": "0",
+    "uuid": "014cda40-262c-11e9-8ed5-1f502aa6b3a8"
+}

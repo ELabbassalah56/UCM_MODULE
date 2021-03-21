@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="b94cf7f7-93ef-4111-b962-32fc23cd1bdc">
+      <SHORT-NAME>ara</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="36d566ac-d2a0-499e-af1c-50bee60d0d4f">
+          <SHORT-NAME>apd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="95833926-fecc-4e4f-a287-07cfbe3469ae">
+              <SHORT-NAME>ucm</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="b2deb5eb-7fc9-4bdc-96a3-4c8cbcba5f9f">
+                  <SHORT-NAME>timing</SHORT-NAME>
+                  <ELEMENTS>
+                    <SOMEIP-SD-SERVER-SERVICE-INSTANCE-CONFIG>
+                      <SHORT-NAME>SomeipServerServiceInstanceConfig</SHORT-NAME>
+                      <INITIAL-OFFER-BEHAVIOR>
+                        <INITIAL-DELAY-MAX-VALUE>0.1</INITIAL-DELAY-MAX-VALUE>
+                        <INITIAL-DELAY-MIN-VALUE>0.01</INITIAL-DELAY-MIN-VALUE>
+                        <INITIAL-REPETITIONS-BASE-DELAY>0.2</INITIAL-REPETITIONS-BASE-DELAY>
+                        <INITIAL-REPETITIONS-MAX>3</INITIAL-REPETITIONS-MAX>
+                      </INITIAL-OFFER-BEHAVIOR>
+                      <OFFER-CYCLIC-DELAY>2.0</OFFER-CYCLIC-DELAY>
+                      <REQUEST-RESPONSE-DELAY>
+                        <MAX-VALUE>1.5</MAX-VALUE>
+                        <MIN-VALUE>1.5</MIN-VALUE>
+                      </REQUEST-RESPONSE-DELAY>
+                      <SERVICE-OFFER-TIME-TO-LIVE>10</SERVICE-OFFER-TIME-TO-LIVE>
+                    </SOMEIP-SD-SERVER-SERVICE-INSTANCE-CONFIG>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

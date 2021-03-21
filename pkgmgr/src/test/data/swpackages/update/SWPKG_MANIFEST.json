@@ -1,0 +1,16 @@
+{
+    "actionType": "Update",
+    "activationAction": "ApplicationRestart",
+    "category": "examplePACKAGE",
+    "compressedSoftwarePackageSize": "524288",
+    "diagnosticAddress": "17473",
+    "isDeltaPackage": "false",
+    "minUCMSupportedVersion": "1.0.0_0",
+    "maxUCMSupportedVersion": "1.0.0_0",
+    "packagerID": "1347111236",
+    "shortName": "SWP_TEST1_UPD",
+    "typeApproval": "None",
+    "ucmIdentifier": "16722",
+    "uncompressedSoftwarePackageSize": "655360",
+    "uuid": "0886acfa-262c-11e9-b807-bbdb09a636a0"
+}

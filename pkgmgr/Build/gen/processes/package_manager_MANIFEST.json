@@ -1,0 +1,107 @@
+[
+    {
+        "key": "platform_application",
+        "value": {
+            "bool": true
+        },
+        "checksum": 0
+    },
+    {
+        "key": "application_states",
+        "value": {
+            "string[]": [
+                "Running",
+                "Terminated"
+            ]
+        },
+        "checksum": 0
+    },
+    {
+        "key": "timer_resolution_ns",
+        "value": {
+            "uint32": 1000
+        },
+        "checksum": 0
+    },
+    {
+        "key": "startup_configs",
+        "value": {
+            "object[]": [
+                {
+                    "key": "Config #1",
+                    "value": {
+                        "object[]": [
+                            {
+                                "key": "depends",
+                                "value": {
+                                    "string[]": [
+                                         "ara_dlt_daemon.Running",
+                                         "ara_vsomeipd.Running"
+                                     ]
+                                },
+                                "checksum": 0
+                            },
+                            {
+                                "key": "machine_states",
+                                "value": {
+                                    "string[]": [
+                                         "Driving"
+                                     ]
+                                },
+                                "checksum": 0
+                            },
+                            {
+                                "key": "function_group_states",
+                                "value": {
+                                    "string[]": [
+                                    ]
+                                },
+                                "checksum": 0
+                            },
+                            {
+                                "key": "resource_group",
+                                "value": {
+                                    "string": "ResourceGroup1"
+                                },
+                                "checksum": 0
+                            },
+                            {
+                                "key": "scheduling_policy",
+                                "value": {
+                                    "string": "SCHEDULING-POLICY-ROUND-ROBIN"
+                                },
+                                "checksum": 0
+                            },
+                            {
+                                "key": "scheduling_priority",
+                                "value": {
+                                    "uint32": 12
+                                },
+                                "checksum": 0
+                            },
+                            {
+                                "key": "arguments",
+                                "value": {
+                                    "string[]": [
+                                    ]
+                                },
+                                "checksum": 0
+                            },
+                            {
+                                "key": "environment",
+                                "value": {
+                                    "string[]": [
+                                         "VSOMEIP_CONFIGURATION=/opt/package_manager/etc/vsomeip.json"
+                                    ]
+                                },
+                                "checksum": 0
+                            }
+                        ]
+                    },
+                    "checksum": 0
+                }
+            ]
+        },
+        "checksum": 0
+    }
+]

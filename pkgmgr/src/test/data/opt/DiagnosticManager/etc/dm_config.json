@@ -1,0 +1,245 @@
+{
+   "Conversation":
+   {
+      "WorkerThreads": "3",
+      "cmwDiagStatusSvcInstId": 1000,
+      "p2Timings": [
+        { "Session": 1,
+          "timing": {
+            "p2": 10000,
+            "p2_star": 5000
+          }
+        },
+        { "Session": 2,
+          "timing": {
+            "p2": 10000,
+            "p2_star": 5000
+          }
+        },
+        { "Session": 3,
+          "timing": {
+            "p2": 10000,
+            "p2_star": 5000
+          }
+        },
+        { "Session": 4,
+          "timing": {
+            "p2": 10000,
+            "p2_star": 5000
+          }
+        }
+      ]
+   },
+
+   "Network":
+   {
+      "local_ip": "0.0.0.0",
+      "UdpPort": "13400",
+      "TcpPort": "13400"
+   },
+
+   "EcuInstance":
+   {
+      "diagnosticAddress": 48059
+   },
+
+   "ServiceProcessors": [
+
+    {
+      "SID": 16,
+      "class": "builtin_SessionControl"
+    },
+
+    {
+      "SID": 34,
+      "class": "builtin_ReadDid",
+      "allowedSessions": [ 1, 2, 3 ],
+      "multiplexer": [
+        {
+          "id": 1,
+          "cmwServiceId": 26891,
+          "cmwServiceInstanceId": 1402
+        },
+        {
+          "id": 2,
+          "cmwServiceId": 26891,
+          "cmwServiceInstanceId": 1402
+        },
+        {
+          "id": 3,
+          "cmwServiceId": 12879,
+          "cmwServiceInstanceId": 1402
+        }
+      ]
+    },
+
+    {
+      "SID": 46,
+      "class": "builtin_WriteDid",
+      "allowedSessions": [ 1, 2, 3 ],
+      "multiplexer": [
+        {
+          "id": 1,
+          "cmwServiceId": 26891,
+          "cmwServiceInstanceId": 1402
+        },
+        {
+          "id": 2,
+          "cmwServiceId": 26891,
+          "cmwServiceInstanceId": 1402
+        }
+      ]
+    },
+
+    {
+      "SID": 49,
+      "class": "builtin_RoutineService",
+      "allowedSessions": [ 2, 3 ],
+      "multiplexer": [
+        {
+          "id": 512,
+          "cmwServiceId": 35679,
+          "cmwServiceInstanceId": 1402
+        },
+        {
+          "id": 513,
+          "cmwServiceId": 15347,
+          "cmwServiceInstanceId": 1401
+        }
+      ]
+    },
+
+    {
+      "SID": 62,
+      "class": "builtin_TesterPresent"
+    },
+
+    {
+      "SID": 133,
+      "class": "builtin_ControlDTCSetting",
+      "allowedSessions": [ 1, 2, 3]
+    }
+  ],
+
+  "description.representsVin": "This is the ID of the did that has its representsVin attribute set to true",
+  "representsVin": 1,
+
+  "ServiceRequestNotificationProcessors" : [
+  ],
+
+  "Plugins": [
+      {
+         "path": "/usr/lib/libdcmCalculatorPluginTyped.so"
+      }
+  ],
+
+  "Events": [
+    {
+      "id": 0,
+      "cmwDiagEventSvcInstId": 1000,
+      "cmwDiagEventNotifcnSvcInstId": 2000,
+      "name": "event1",
+      "fccThreshold": 3,
+      "agingAllowed": true,
+      "agingCycleCounterThreshold": 7,
+      "provideEventStatusChangeNotification": true
+    },
+    {
+      "id": 13,
+      "cmwDiagEventSvcInstId": 1013,
+      "cmwDiagEventNotifcnSvcInstId": 2013,
+      "name": "event2",
+      "fccThreshold": 2,
+      "agingAllowed": true,
+      "agingCycleCounterThreshold": 7,
+      "provideEventStatusChangeNotification": true
+    }
+  ],
+  "OperationCycles": [
+    {
+      "id": 0,
+      "cmwOpCycleSvcInstId": 1000,
+      "name": "opcycle1"
+    }
+  ],
+  "DebounceAlgorithms": [
+    {
+      "id": 0,
+      "type": 0,
+      "counterDecrementStepSize": 3,
+      "counterFailedThreshold": 127,
+      "counterPassedThreshold": -128,
+      "counterIncrementStepSize": 3,
+      "counterJumpDown": true,
+      "counterJumpDownValue": 30,
+      "counterJumpUp": true,
+      "counterJumpUpValue": 30
+    },
+    {
+      "id": 1,
+      "type": 1,
+      "timePassedThreshold": 100,
+      "timeFailedThreshold": 150
+    }
+  ],
+  "eventToDebounceAlgorithmMappings": [
+    {
+      "event": 0,
+      "debounceAlgorithm": 1
+    }
+  ],
+  "eventToOpcycleMappings": [
+    {
+      "event": 0,
+      "opcycle": 0
+    },
+    {
+      "event": 13,
+      "opcycle": 0
+    }
+  ],
+  "DTC": [
+    {
+      "id": 0,
+      "cmwDtcInfoSvcInstId": 10,
+      "udsDtcValue": 123,
+      "diagnosticTroubleCodeProps": {
+        "maxNumberFreezeFrameRecords": 13,
+        "freezeFrames": []
+      }
+    },
+    {
+      "id": 1,
+      "cmwDtcInfoSvcInstId": 20,
+      "udsDtcValue": 124
+    }
+  ],
+  "eventToDtcMappings": [
+    {
+      "event": 0,
+      "dtcId": 0
+    },
+
+    {
+      "event": 13,
+      "dtcId": 1
+    }
+  ],
+  "enableContionGroups": [
+    {
+      "id": 0,
+      "group": [true, false]
+    },
+    {
+       "id": 1,
+       "group": [true, true, false]
+    }
+  ],
+
+  "eventToEnableConditionGroupMapping": [
+    {
+       "event": 0,
+       "enableContionGroup": 1
+    }
+  ]
+}

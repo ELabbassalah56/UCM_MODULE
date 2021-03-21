@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="6e16888e-18a6-45ca-a1ce-5d5e23fe4942">
+      <SHORT-NAME>ara</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="4c43aa1f-704a-4306-b780-a03ed17d242b">
+          <SHORT-NAME>apd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="d0e7a027-b4de-42ee-bd03-5e98a5ffb73b">
+              <SHORT-NAME>ucm</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="39deffe5-c5da-45e0-b145-d0cee32a1c60">
+                  <SHORT-NAME>deployment</SHORT-NAME>
+                  <SHORT-NAME-PATTERN></SHORT-NAME-PATTERN>
+                  <ELEMENTS>
+                    <SOMEIP-SERVICE-INTERFACE-DEPLOYMENT UUID="85260a7f-55d4-405d-9bff-94f8bc5dd7d5">
+                      <SHORT-NAME>PackageManagementSomeIp</SHORT-NAME>
+                      <FIELD-DEPLOYMENTS>
+                        <SOMEIP-FIELD-DEPLOYMENT UUID="37c13bc4-4f8e-408e-9d9e-34d8650543c1">
+                          <SHORT-NAME>CurrentStatus</SHORT-NAME>
+                          <FIELD-REF DEST="FIELD">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/CurrentStatus</FIELD-REF>
+                          <GET UUID="92b30e64-b026-40dd-a24e-d95fc3c97443">
+                            <SHORT-NAME>CurrentStatus_getter</SHORT-NAME>
+                            <METHOD-ID>30005</METHOD-ID>
+                            <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                          </GET>
+                          <NOTIFIER UUID="fad44742-13d0-4919-a744-410c0f5bc3d7">
+                            <SHORT-NAME>CurrentStatus_notifier</SHORT-NAME>
+                            <EVENT-ID>41206</EVENT-ID>
+                            <TRANSPORT-PROTOCOL>TCP</TRANSPORT-PROTOCOL>
+                          </NOTIFIER>
+                        </SOMEIP-FIELD-DEPLOYMENT>
+                      </FIELD-DEPLOYMENTS>
+                      <METHOD-DEPLOYMENTS>
+                        <SOMEIP-METHOD-DEPLOYMENT UUID="b78452dd-6a65-49b2-93d1-66fbf04c0da2">
+                          <SHORT-NAME>Activate</SHORT-NAME>
+                          <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/Activate</METHOD-REF>
+                          <METHOD-ID>30140</METHOD-ID>
+                          <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                        </SOMEIP-METHOD-DEPLOYMENT>
+                        <SOMEIP-METHOD-DEPLOYMENT UUID="935b659d-6771-40f9-a682-15501e77d7e6">
+                          <SHORT-NAME>Cancel</SHORT-NAME>
+                          <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/Cancel</METHOD-REF>
+                          <METHOD-ID>30120</METHOD-ID>
+                          <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                        </SOMEIP-METHOD-DEPLOYMENT>
+                        <SOMEIP-METHOD-DEPLOYMENT UUID="203440b6-408b-4f04-85d7-1d725f79a9ea">
+                          <SHORT-NAME>DeleteTransfer</SHORT-NAME>
+                          <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/DeleteTransfer</METHOD-REF>
+                          <METHOD-ID>30080</METHOD-ID>
+                          <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                        </SOMEIP-METHOD-DEPLOYMENT>
+                        <SOMEIP-METHOD-DEPLOYMENT UUID="1bf10f0e-f52a-48e9-8a65-afcaef90a374">
+                          <SHORT-NAME>Finish</SHORT-NAME>
+                          <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/Finish</METHOD-REF>
+                          <METHOD-ID>30150</METHOD-ID>
+                          <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                        </SOMEIP-METHOD-DEPLOYMENT>
+                        <SOMEIP-METHOD-DEPLOYMENT UUID="599d120e-f8d7-40eb-a38f-73c138d1e97e">
+                          <SHORT-NAME>GetHistory</SHORT-NAME>
+                          <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/GetHistory</METHOD-REF>
+                          <METHOD-ID>30200</METHOD-ID>
+                          <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                        </SOMEIP-METHOD-DEPLOYMENT>
+                        <SOMEIP-METHOD-DEPLOYMENT UUID="0a80eccf-9bea-4246-b251-361a159fc7b3">
+                          <SHORT-NAME>GetLog</SHORT-NAME>
+                          <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/GetLog</METHOD-REF>
+                          <METHOD-ID>30170</METHOD-ID>
+                          <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                        </SOMEIP-METHOD-DEPLOYMENT>
+                        <SOMEIP-METHOD-DEPLOYMENT UUID="7f296bf5-74a5-4b44-9f96-db116a236720">
+                          <SHORT-NAME>GetSwClusterChangeInfo</SHORT-NAME>
+                          <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/GetSwClusterChangeInfo</METHOD-REF>
+                          <METHOD-ID>30000</METHOD-ID>
+                          <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                        </SOMEIP-METHOD-DEPLOYMENT>
+                        <SOMEIP-METHOD-DEPLOYMENT UUID="1bb9465f-b958-4895-85a6-4e31d0646aad">
+                          <SHORT-NAME>GetSwClusterInfo</SHORT-NAME>
+                          <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/GetSwClusterInfo</METHOD-REF>
+                          <METHOD-ID>29900</METHOD-ID>
+                          <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                        </SOMEIP-METHOD-DEPLOYMENT>
+                        <SOMEIP-METHOD-DEPLOYMENT UUID="6777e29d-fe24-4834-8e43-36d531348c76">
+                          <SHORT-NAME>GetSwPackages</SHORT-NAME>
+                          <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/GetSwPackages</METHOD-REF>
+                          <METHOD-ID>30020</METHOD-ID>
+                          <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                        </SOMEIP-METHOD-DEPLOYMENT>
+                        <SOMEIP-METHOD-DEPLOYMENT UUID="cd690cbe-b563-461a-9c3e-f1f4615641ce">
+                          <SHORT-NAME>GetSwProcessProgress</SHORT-NAME>
+                          <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/GetSwProcessProgress</METHOD-REF>
+                          <METHOD-ID>30110</METHOD-ID>
+                          <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                        </SOMEIP-METHOD-DEPLOYMENT>
+                        <SOMEIP-METHOD-DEPLOYMENT UUID="8d28aa28-f6a0-4f41-bf27-374609b059a8">
+                          <SHORT-NAME>ProcessSwPackage</SHORT-NAME>
+                          <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/ProcessSwPackage</METHOD-REF>
+                          <METHOD-ID>30090</METHOD-ID>
+                          <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                        </SOMEIP-METHOD-DEPLOYMENT>
+                        <SOMEIP-METHOD-DEPLOYMENT UUID="daf77e90-52e0-4974-a3d5-7e94553b6f50">
+                          <SHORT-NAME>RevertProcessedSwPackages</SHORT-NAME>
+                          <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/RevertProcessedSwPackages</METHOD-REF>
+                          <METHOD-ID>30100</METHOD-ID>
+                          <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                        </SOMEIP-METHOD-DEPLOYMENT>
+                        <SOMEIP-METHOD-DEPLOYMENT UUID="c751795b-f091-4078-a66d-3d6bfd1a7862">
+                          <SHORT-NAME>Rollback</SHORT-NAME>
+                          <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/Rollback</METHOD-REF>
+                          <METHOD-ID>30130</METHOD-ID>
+                          <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                        </SOMEIP-METHOD-DEPLOYMENT>
+                        <SOMEIP-METHOD-DEPLOYMENT UUID="cfa1e962-d21b-4992-bc35-adae75592747">
+                          <SHORT-NAME>SetLogLevel</SHORT-NAME>
+                          <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/SetLogLevel</METHOD-REF>
+                          <METHOD-ID>30160</METHOD-ID>
+                          <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                        </SOMEIP-METHOD-DEPLOYMENT>
+                        <SOMEIP-METHOD-DEPLOYMENT UUID="fe535b7b-04b5-404e-b398-2a29543362d5">
+                          <SHORT-NAME>TransferData</SHORT-NAME>
+                          <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/TransferData</METHOD-REF>
+                          <METHOD-ID>30060</METHOD-ID>
+                          <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                        </SOMEIP-METHOD-DEPLOYMENT>
+                        <SOMEIP-METHOD-DEPLOYMENT UUID="639caf76-6bf3-40ac-b809-929e1024fafd">
+                          <SHORT-NAME>TransferExit</SHORT-NAME>
+                          <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/TransferExit</METHOD-REF>
+                          <METHOD-ID>30070</METHOD-ID>
+                          <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                        </SOMEIP-METHOD-DEPLOYMENT>
+                        <SOMEIP-METHOD-DEPLOYMENT UUID="50a96b71-b2c9-434f-a807-b6d3f21596af">
+                          <SHORT-NAME>TransferStart</SHORT-NAME>
+                          <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/TransferStart</METHOD-REF>
+                          <METHOD-ID>30050</METHOD-ID>
+                          <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                        </SOMEIP-METHOD-DEPLOYMENT>
+                      </METHOD-DEPLOYMENTS>
+                      <SERVICE-INTERFACE-REF DEST="SERVICE-INTERFACE">/ara/ucm/pkgmgr/portinterfaces/PackageManagement</SERVICE-INTERFACE-REF>
+                      <EVENT-GROUPS>
+                        <SOMEIP-EVENT-GROUP UUID="04dade67-56ca-45f7-a3fe-6c865f42b99c">
+                          <SHORT-NAME>CurrentStatus_eventgroup</SHORT-NAME>
+                          <EVENT-GROUP-ID>44404</EVENT-GROUP-ID>
+                          <EVENT-REFS>
+                            <EVENT-REF DEST="SOMEIP-EVENT-DEPLOYMENT">/ara/apd/ucm/deployment/PackageManagementSomeIp/CurrentStatus/CurrentStatus_notifier</EVENT-REF>
+                          </EVENT-REFS>
+                        </SOMEIP-EVENT-GROUP>
+                      </EVENT-GROUPS>
+                      <SERVICE-INTERFACE-ID>629</SERVICE-INTERFACE-ID>
+                      <SERVICE-INTERFACE-VERSION>
+                        <MAJOR-VERSION>1</MAJOR-VERSION>
+                        <MINOR-VERSION>0</MINOR-VERSION>
+                      </SERVICE-INTERFACE-VERSION>
+                    </SOMEIP-SERVICE-INTERFACE-DEPLOYMENT>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

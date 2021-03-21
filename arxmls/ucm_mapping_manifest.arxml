@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="c805cbcd-6745-45c5-8766-fac8e27f1a3c">
+      <SHORT-NAME>ara</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="3f826d02-69fb-4659-9862-8d5aefcb4252">
+          <SHORT-NAME>apd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="bd1c35d3-6bcd-4a22-a56d-8c31bdbe702e">
+              <SHORT-NAME>ucm</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="6056195a-e7ae-4e4b-b9d4-8bd8ac65d520">
+                  <SHORT-NAME>mapping</SHORT-NAME>
+                  <ELEMENTS>
+                    <PROCESS-TO-MACHINE-MAPPING-SET>
+                      <SHORT-NAME>DevelopmentMachineMappings</SHORT-NAME>
+                        <PROCESS-TO-MACHINE-MAPPINGS>
+                          <PROCESS-TO-MACHINE-MAPPING>
+                            <SHORT-NAME>PackageManagerToMachineMapping</SHORT-NAME>
+                            <MACHINE-REF DEST="MACHINE">/ara/apd/machines/DevelopmentMachine</MACHINE-REF>
+                            <PROCESS-REF DEST="PROCESS">/ara/apd/ucm/processes/package_manager</PROCESS-REF>
+                          </PROCESS-TO-MACHINE-MAPPING>
+                        </PROCESS-TO-MACHINE-MAPPINGS>
+                    </PROCESS-TO-MACHINE-MAPPING-SET>
+                    <SOMEIP-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="81063125-c5be-4813-8e69-2f6e67479d2e">
+                      <SHORT-NAME>ProvidedPackageManagementInstanceToMachineMapping</SHORT-NAME>
+                      <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/ara/apd/machines/DevelopmentMachineDesign/EthCommunicationConnector</COMMUNICATION-CONNECTOR-REF>
+                      <SERVICE-INSTANCE-REFS>
+                        <SERVICE-INSTANCE-REF DEST="PROVIDED-SOMEIP-SERVICE-INSTANCE">/ara/apd/ucm/instance/ProvidedSomeIpPackageManagementInstance</SERVICE-INSTANCE-REF>
+                      </SERVICE-INSTANCE-REFS>
+                      <UDP-PORT>5000</UDP-PORT>
+                    </SOMEIP-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                    <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="e4487993-8903-4a8f-9203-b83dabe3b5e4">
+                      <SHORT-NAME>ProvidedPackageManagementInstanceToPortMapping</SHORT-NAME>
+                      <PORT-PROTOTYPE-IREF>
+                        <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/ara/apd/ucm/executables/package_manager/package_manager_root</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                        <TARGET-PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ara/apd/ucm/software_components/package_manager_swc/PackageManagementPPort</TARGET-PORT-PROTOTYPE-REF>
+                      </PORT-PROTOTYPE-IREF>
+                      <PROCESS-REF DEST="PROCESS">/ara/apd/ucm/processes/package_manager</PROCESS-REF>
+                      <SERVICE-INSTANCE-REF DEST="PROVIDED-SOMEIP-SERVICE-INSTANCE">/ara/apd/ucm/instance/ProvidedSomeIpPackageManagementInstance</SERVICE-INSTANCE-REF>
+                    </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

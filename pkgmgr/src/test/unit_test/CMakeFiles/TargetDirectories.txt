@@ -1,0 +1,13 @@
+/home/user/Desktop/GP_VALEO_AP/ara-project-R19-11/ara-api/ucm/pkgmgr/src/test/unit_test/CMakeFiles/install.dir
+/home/user/Desktop/GP_VALEO_AP/ara-project-R19-11/ara-api/ucm/pkgmgr/src/test/unit_test/CMakeFiles/list_install_components.dir
+/home/user/Desktop/GP_VALEO_AP/ara-project-R19-11/ara-api/ucm/pkgmgr/src/test/unit_test/CMakeFiles/rebuild_cache.dir
+/home/user/Desktop/GP_VALEO_AP/ara-project-R19-11/ara-api/ucm/pkgmgr/src/test/unit_test/CMakeFiles/install/strip.dir
+/home/user/Desktop/GP_VALEO_AP/ara-project-R19-11/ara-api/ucm/pkgmgr/src/test/unit_test/CMakeFiles/install/local.dir
+/home/user/Desktop/GP_VALEO_AP/ara-project-R19-11/ara-api/ucm/pkgmgr/src/test/unit_test/CMakeFiles/edit_cache.dir
+/home/user/Desktop/GP_VALEO_AP/ara-project-R19-11/ara-api/ucm/pkgmgr/src/test/unit_test/unit_test/CMakeFiles/install.dir
+/home/user/Desktop/GP_VALEO_AP/ara-project-R19-11/ara-api/ucm/pkgmgr/src/test/unit_test/unit_test/CMakeFiles/list_install_components.dir
+/home/user/Desktop/GP_VALEO_AP/ara-project-R19-11/ara-api/ucm/pkgmgr/src/test/unit_test/unit_test/CMakeFiles/rebuild_cache.dir
+/home/user/Desktop/GP_VALEO_AP/ara-project-R19-11/ara-api/ucm/pkgmgr/src/test/unit_test/unit_test/CMakeFiles/apd-ucm-testpackage-manager.dir
+/home/user/Desktop/GP_VALEO_AP/ara-project-R19-11/ara-api/ucm/pkgmgr/src/test/unit_test/unit_test/CMakeFiles/install/local.dir
+/home/user/Desktop/GP_VALEO_AP/ara-project-R19-11/ara-api/ucm/pkgmgr/src/test/unit_test/unit_test/CMakeFiles/install/strip.dir
+/home/user/Desktop/GP_VALEO_AP/ara-project-R19-11/ara-api/ucm/pkgmgr/src/test/unit_test/unit_test/CMakeFiles/edit_cache.dir

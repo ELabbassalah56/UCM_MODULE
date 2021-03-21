@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="64731cd5-ce33-4193-b585-faabb5302362">
+      <SHORT-NAME>ara</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="d57bd5be-94bb-4e00-bf36-d825ff8072af">
+          <SHORT-NAME>apd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="f8daf4fc-48fa-48bf-a1f2-76ddf256d51c">
+              <SHORT-NAME>ucm</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="c3b49093-f588-437b-b344-ced4e2522816">
+                  <SHORT-NAME>executables</SHORT-NAME>
+                  <ELEMENTS>
+                    <EXECUTABLE UUID="7a773e82-0b60-4826-8e8f-1bac1f02f4c8">
+                      <SHORT-NAME>package_manager</SHORT-NAME>
+                      <CATEGORY>PLATFORM_LEVEL</CATEGORY>
+                      <BUILD-TYPE>BUILD-TYPE-DEBUG</BUILD-TYPE>
+                      <MINIMUM-TIMER-GRANULARITY>1000.0</MINIMUM-TIMER-GRANULARITY>
+                      <ROOT-SW-COMPONENT-PROTOTYPE UUID="f598be41-8416-4568-94b3-b8f6bba2daa9">
+                        <SHORT-NAME>package_manager_root</SHORT-NAME>
+                        <APPLICATION-TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/ara/apd/ucm/software_components/package_manager_swc</APPLICATION-TYPE-TREF>
+                      </ROOT-SW-COMPONENT-PROTOTYPE>
+                      <VERSION>1.0.0.0</VERSION>
+                    </EXECUTABLE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="0c6c9525-f179-4fd1-88c4-df61d70b81c4">
+                  <SHORT-NAME>processes</SHORT-NAME>
+                  <ELEMENTS>
+                    <PROCESS UUID="1a359251-3e3b-4495-a5b5-72048c55b8ca">
+                      <SHORT-NAME>package_manager</SHORT-NAME>
+                      <EXECUTABLE-REF DEST="EXECUTABLE">/ara/apd/ucm/executables/package_manager</EXECUTABLE-REF>
+                      <PROCESS-STATE-MACHINE UUID="62e7d061-ed1c-4dc5-8eec-fbbba7916477">
+                        <SHORT-NAME>state_machine</SHORT-NAME>
+                        <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/ara/apd/process_modes/ProcessStateMachine</TYPE-TREF>
+                      </PROCESS-STATE-MACHINE>
+                      <STATE-DEPENDENT-STARTUP-CONFIGS>
+                        <STATE-DEPENDENT-STARTUP-CONFIG>
+                          <EXECUTION-DEPENDENCYS>
+                            <EXECUTION-DEPENDENCY>
+                              <PROCESS-STATE-IREF>
+                                <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ara/apd/system_components/processes/ara_dlt_daemon/state_machine</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                                <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ara/apd/process_modes/ProcessStateMachine/Running</TARGET-MODE-DECLARATION-REF>
+                              </PROCESS-STATE-IREF>
+                            </EXECUTION-DEPENDENCY>
+                            <EXECUTION-DEPENDENCY>
+                              <PROCESS-STATE-IREF>
+                                <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ara/apd/system_components/processes/ara_vsomeipd/state_machine</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                                <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ara/apd/process_modes/ProcessStateMachine/Running</TARGET-MODE-DECLARATION-REF>
+                              </PROCESS-STATE-IREF>
+                            </EXECUTION-DEPENDENCY>
+                          </EXECUTION-DEPENDENCYS>
+                          <FUNCTION-GROUP-STATE-IREFS>
+                            <FUNCTION-GROUP-STATE-IREF>
+                              <CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/ara/apd/machines/DevelopmentMachine/MachineState</CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+                              <TARGET-MODE-DECLARATION-REF DEST="MODE-DECLARATION">/ara/apd/function_group_modes/MachineState/Driving</TARGET-MODE-DECLARATION-REF>
+                            </FUNCTION-GROUP-STATE-IREF>
+                          </FUNCTION-GROUP-STATE-IREFS>
+                          <RESOURCE-GROUP-REF DEST="RESOURCE-GROUP">/ara/apd/machines/DevelopmentMachine/Linux/ResourceGroup1</RESOURCE-GROUP-REF>
+                          <STARTUP-CONFIG-REF DEST="STARTUP-CONFIG">/ara/apd/ucm/startup_configs/startup_set/package_manager_startup</STARTUP-CONFIG-REF>
+                        </STATE-DEPENDENT-STARTUP-CONFIG>
+                      </STATE-DEPENDENT-STARTUP-CONFIGS>
+                    </PROCESS>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="f92d5e7e-ebbd-41c2-be98-04cec9c33341">
+                  <SHORT-NAME>software_components</SHORT-NAME>
+                  <ELEMENTS>
+                    <ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE UUID="55ef5889-5005-421c-8575-97059c52a177">
+                      <SHORT-NAME>package_manager_swc</SHORT-NAME>
+                      <PORTS>
+                        <P-PORT-PROTOTYPE UUID="b0979178-18ae-4323-ae31-1b517566c41c">
+                          <SHORT-NAME>PackageManagementPPort</SHORT-NAME>
+                          <PROVIDED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/ara/ucm/pkgmgr/portinterfaces/PackageManagement</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                      </PORTS>
+                    </ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="bcfb4cc9-8d9a-4235-9b8b-59b7cf3a9fa5">
+                  <SHORT-NAME>startup_configs</SHORT-NAME>
+                  <ELEMENTS>
+                    <STARTUP-CONFIG-SET UUID="0b95a492-36bc-46b2-aa7d-7613c81794a9">
+                      <SHORT-NAME>startup_set</SHORT-NAME>
+                      <STARTUP-CONFIGS>
+                        <STARTUP-CONFIG UUID="316dbc8a-85f4-4dfe-810d-8965aef22312">
+                          <SHORT-NAME>package_manager_startup</SHORT-NAME>
+                          <ENVIRONMENT-VARIABLES>
+                            <TAG-WITH-OPTIONAL-VALUE>
+                              <KEY>VSOMEIP_CONFIGURATION</KEY>
+                              <VALUE>/opt/package_manager/etc/vsomeip.json</VALUE>
+                            </TAG-WITH-OPTIONAL-VALUE>
+                          </ENVIRONMENT-VARIABLES>
+                          <SCHEDULING-POLICY>SCHEDULING-POLICY-ROUND-ROBIN</SCHEDULING-POLICY>
+                          <SCHEDULING-PRIORITY>12</SCHEDULING-PRIORITY>
+                        </STARTUP-CONFIG>
+                      </STARTUP-CONFIGS>
+                    </STARTUP-CONFIG-SET>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

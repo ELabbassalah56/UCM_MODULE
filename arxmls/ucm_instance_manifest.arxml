@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="b94cf7f7-93ef-4111-b962-32fc23cd1bdc">
+      <SHORT-NAME>ara</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="36d566ac-d2a0-499e-af1c-50bee60d0d4f">
+          <SHORT-NAME>apd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="95833926-fecc-4e4f-a287-07cfbe3469ae">
+              <SHORT-NAME>ucm</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="b2deb5eb-7fc9-4bdc-96a3-4c8cbcba5f9f">
+                  <SHORT-NAME>instance</SHORT-NAME>
+                  <ELEMENTS>
+                    <PROVIDED-SOMEIP-SERVICE-INSTANCE UUID="be21077a-0de3-4537-a706-e1c54bba7230">
+                      <SHORT-NAME>ProvidedSomeIpPackageManagementInstance</SHORT-NAME>
+                      <SERVICE-INTERFACE-REF DEST="SOMEIP-SERVICE-INTERFACE-DEPLOYMENT">/ara/apd/ucm/deployment/PackageManagementSomeIp</SERVICE-INTERFACE-REF>
+                      <PROVIDED-EVENT-GROUPS>
+                        <SOMEIP-PROVIDED-EVENT-GROUP UUID="11cb350c-6ca7-4ea8-b533-56014090f831">
+                          <SHORT-NAME>CurrentStatus_provided_eventgroup</SHORT-NAME>
+                          <EVENT-GROUP-REF DEST="SOMEIP-EVENT-GROUP">/ara/apd/ucm/deployment/PackageManagementSomeIp/CurrentStatus_eventgroup</EVENT-GROUP-REF>
+                          <MULTICAST-THRESHOLD>0</MULTICAST-THRESHOLD>
+                        </SOMEIP-PROVIDED-EVENT-GROUP>
+                      </PROVIDED-EVENT-GROUPS>
+                      <SD-SERVER-CONFIG-REF DEST="SOMEIP-SD-SERVER-SERVICE-INSTANCE-CONFIG">/ara/apd/ucm/timing/SomeipServerServiceInstanceConfig</SD-SERVER-CONFIG-REF>
+                      <SERVICE-INSTANCE-ID>828</SERVICE-INSTANCE-ID>
+                    </PROVIDED-SOMEIP-SERVICE-INSTANCE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

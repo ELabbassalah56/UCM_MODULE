@@ -1,0 +1,14 @@
+{
+    "category": "exampleSWCL",
+    "changes": "Example remove",
+    "conflicts": [
+    ],
+    "depends": [
+    ],
+    "license": "AUTOSAR",
+    "previousVersion": "0.2.0_1549030348",
+    "shortName": "SWCL_TEST1_VENDOR_A",
+    "uuid": "0925f048-1570-11e9-8000-4f62f9ef99ce",
+    "vendorID": "1447315780",
+    "version": "0.0.0_0"
+}

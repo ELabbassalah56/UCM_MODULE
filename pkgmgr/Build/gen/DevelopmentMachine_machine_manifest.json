@@ -1,0 +1,366 @@
+[
+    {
+        "checksum": 0,
+        "key": "default_application_timeout",
+        "value": {
+            "object[]": [
+                {
+                    "checksum": 0,
+                    "key": "enter_timeout_ns",
+                    "value": {
+                        "uint32": 2000000000
+                    }
+                },
+                {
+                    "checksum": 0,
+                    "key": "exit_timeout_ns",
+                    "value": {
+                        "uint32": 100000000
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "checksum": 0,
+        "key": "states",
+        "value": {
+            "object[]": [
+                {
+                    "checksum": 0,
+                    "key": "Driving",
+                    "value": {
+                        "object[]": [
+                            {
+                                "checksum": 0,
+                                "key": "enter_timeout_ns",
+                                "value": {
+                                    "uint32": 1001
+                                }
+                            },
+                            {
+                                "checksum": 0,
+                                "key": "exit_timeout_ns",
+                                "value": {
+                                    "uint32": 1002
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "checksum": 0,
+                    "key": "Leaving",
+                    "value": {
+                        "object[]": [
+                            {
+                                "checksum": 0,
+                                "key": "enter_timeout_ns",
+                                "value": {
+                                    "uint32": 1005
+                                }
+                            },
+                            {
+                                "checksum": 0,
+                                "key": "exit_timeout_ns",
+                                "value": {
+                                    "uint32": 1006
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "checksum": 0,
+                    "key": "Parking",
+                    "value": {
+                        "object[]": [
+                            {
+                                "checksum": 0,
+                                "key": "enter_timeout_ns",
+                                "value": {
+                                    "uint32": 1003
+                                }
+                            },
+                            {
+                                "checksum": 0,
+                                "key": "exit_timeout_ns",
+                                "value": {
+                                    "uint32": 1004
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "checksum": 0,
+        "key": "function_groups",
+        "value": {
+            "object[]": [
+                {
+                    "checksum": 0,
+                    "key": "Lane_Change_Assistance",
+                    "value": {
+                        "object[]": [
+                            {
+                                "checksum": 0,
+                                "key": "states",
+                                "value": {
+                                    "object[]": [
+                                        {
+                                            "checksum": 0,
+                                            "key": "Off",
+                                            "value": {
+                                                "object[]": [
+                                                    {
+                                                        "checksum": 0,
+                                                        "key": "enter_timeout_ns",
+                                                        "value": {
+                                                            "uint32": 105
+                                                        }
+                                                    },
+                                                    {
+                                                        "checksum": 0,
+                                                        "key": "exit_timeout_ns",
+                                                        "value": {
+                                                            "uint32": 106
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "checksum": 0,
+                                            "key": "On",
+                                            "value": {
+                                                "object[]": [
+                                                    {
+                                                        "checksum": 0,
+                                                        "key": "enter_timeout_ns",
+                                                        "value": {
+                                                            "uint32": 107
+                                                        }
+                                                    },
+                                                    {
+                                                        "checksum": 0,
+                                                        "key": "exit_timeout_ns",
+                                                        "value": {
+                                                            "uint32": 108
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "checksum": 0,
+                    "key": "Pedestrian_Protection",
+                    "value": {
+                        "object[]": [
+                            {
+                                "checksum": 0,
+                                "key": "states",
+                                "value": {
+                                    "object[]": [
+                                        {
+                                            "checksum": 0,
+                                            "key": "Off",
+                                            "value": {
+                                                "object[]": [
+                                                    {
+                                                        "checksum": 0,
+                                                        "key": "enter_timeout_ns",
+                                                        "value": {
+                                                            "uint32": 100
+                                                        }
+                                                    },
+                                                    {
+                                                        "checksum": 0,
+                                                        "key": "exit_timeout_ns",
+                                                        "value": {
+                                                            "uint32": 101
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "checksum": 0,
+                                            "key": "On",
+                                            "value": {
+                                                "object[]": [
+                                                    {
+                                                        "checksum": 0,
+                                                        "key": "enter_timeout_ns",
+                                                        "value": {
+                                                            "uint32": 102
+                                                        }
+                                                    },
+                                                    {
+                                                        "checksum": 0,
+                                                        "key": "exit_timeout_ns",
+                                                        "value": {
+                                                            "uint32": 103
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "checksum": 0,
+        "key": "resource_groups",
+        "value": {
+            "object[]": [
+                {
+                    "checksum": 0,
+                    "key": "ResourceGroup1",
+                    "value": {
+                        "object[]": [
+                            {
+                                "checksum": 0,
+                                "key": "cpu_usage",
+                                "value": {
+                                    "uint32": 95
+                                }
+                            },
+                            {
+                                "checksum": 0,
+                                "key": "mem_usage",
+                                "value": {
+                                    "uint32": 2000000000
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "checksum": 0,
+                    "key": "ResourceGroup2",
+                    "value": {
+                        "object[]": [
+                            {
+                                "checksum": 0,
+                                "key": "cpu_usage",
+                                "value": {
+                                    "uint32": 95
+                                }
+                            },
+                            {
+                                "checksum": 0,
+                                "key": "mem_usage",
+                                "value": {
+                                    "uint32": 2000000000
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "checksum": 0,
+                    "key": "ResourceGroupDB",
+                    "value": {
+                        "object[]": [
+                            {
+                                "checksum": 0,
+                                "key": "cpu_usage",
+                                "value": {
+                                    "uint32": 80
+                                }
+                            },
+                            {
+                                "checksum": 0,
+                                "key": "mem_usage",
+                                "value": {
+                                    "uint32": 500000000
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "checksum": 0,
+                    "key": "ResourceGroupDIAG",
+                    "value": {
+                        "object[]": [
+                            {
+                                "checksum": 0,
+                                "key": "cpu_usage",
+                                "value": {
+                                    "uint32": 80
+                                }
+                            },
+                            {
+                                "checksum": 0,
+                                "key": "mem_usage",
+                                "value": {
+                                    "uint32": 500000000
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "checksum": 0,
+                    "key": "ResourceGroupIAM",
+                    "value": {
+                        "object[]": [
+                            {
+                                "checksum": 0,
+                                "key": "cpu_usage",
+                                "value": {
+                                    "uint32": 80
+                                }
+                            },
+                            {
+                                "checksum": 0,
+                                "key": "mem_usage",
+                                "value": {
+                                    "uint32": 500000000
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "checksum": 0,
+                    "key": "ResourceGroupSM",
+                    "value": {
+                        "object[]": [
+                            {
+                                "checksum": 0,
+                                "key": "cpu_usage",
+                                "value": {
+                                    "uint32": 80
+                                }
+                            },
+                            {
+                                "checksum": 0,
+                                "key": "mem_usage",
+                                "value": {
+                                    "uint32": 500000000
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+]
