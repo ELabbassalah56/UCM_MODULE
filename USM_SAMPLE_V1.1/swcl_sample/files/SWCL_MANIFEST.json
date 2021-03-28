@@ -1,0 +1,26 @@
+"softwareCluster": {
+        "category": "sampleSWCL",
+        "changes": "Initial release",
+        "conflicts": [
+            {
+                "operator": ">=",
+                "shortName": "SWCL_SAMPLE_VENDOR_B",
+                "version": "0.0.0_0"
+            }
+        ],
+        "depends": [
+            {
+                "operator": ">=",
+                "shortName": "SWCL_BASE",
+                "version": "1.0.0_0"
+            }
+        ],
+        "license": "AUTOSAR",
+        "previousVersion": "0.0.0_0",
+        "shortName": "SWCL_SAMPLE_VENDOR_A",
+        "uuid": "0925f048-1570-11e9-8000-4f62f9ef99ce",
+        "vendorID": "1447315780",
+        "vendorSig": "MEUCIE9FQqHutJlOPhB9JUwJwgWMyp+UmzOXyEMmOvD8rdgJAiEAy7B8R7dFtK+u46GEbXjSCZr2mgZbEDMVoespmXNmGng=",
+        "version": "0.1.0_1547190872"
+    }
+    

@@ -1,0 +1,88 @@
+[
+    {
+        "key": "platform_application",
+        "value": {
+            "bool": false
+        },
+        "checksum": 1639441683
+    },
+    {
+        "key": "application_states",
+        "value": {
+            "string[]": [ ]
+        },
+        "checksum": 1639441683
+    },
+    {
+        "key": "timer_resolution_ns",
+        "value": {
+            "uint32": 1000
+        },
+        "checksum": 1405615546
+    },
+    {
+        "key": "startup_configs",
+        "value": {
+            "object[]": [
+                {
+                    "key": "Machine: Driving",
+                    "value": {
+                        "object[]": [
+                            {
+                                "key": "depends",
+                                "value": {
+                                    "string[]": [ "ara_dlt_daemon.Running", "package_manager.Running" ]
+                                },
+                                "checksum": 2301152528
+                            },
+                            {
+                                "key": "machine_states",
+                                "value": {
+                                    "string[]": [ "Driving" ]
+                                },
+                                "checksum": 2301152528
+                            },
+                            {
+                                "key": "function_group_states",
+                                "value": {
+                                    "string[]": [ ]
+                                },
+                                "checksum": 2301152528
+                            },
+                            {
+                                "key": "resource_group",
+                                "value": {
+                                    "string": "Resource group 1"
+                                },
+                                "checksum": 2301152528
+                            },
+                            {
+                                "key": "scheduling_policy",
+                                "value": {
+                                    "string": "Round Robin"
+                                },
+                                "checksum": 2301152528
+                            },
+                            {
+                                "key": "scheduling_priority",
+                                "value": {
+                                    "uint32": 12
+                                },
+                                "checksum": 2301152528
+                            },
+                            {
+                                "key": "arguments",
+                                "value": {
+                                    "string[]": [ ]
+                                },
+                                "checksum": 2301152528
+                            }
+                        ]
+                    },
+                    "checksum": 870226170
+                }
+            ]
+        },
+        "checksum": 870226170
+    }
+]
