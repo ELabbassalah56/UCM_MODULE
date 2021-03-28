@@ -183,14 +183,14 @@ public:
     /// kUpdated or kRemoved.
     ///
     /// @uptrace{SWS_UCM_00030}
-    Future<GetSwClusterChangeInfoOutput> GetSwClusterChangeInfo() override;
+    Future<GetSwClusterChangeInfoOutput> GetSwClusterChangeInfo() override; //inactive  section
 
     /// @brief Retrieve a list of SoftwareClusters.
     ///
     /// @return List of installed SoftwareClusters that are in state kPresent.
     ///
     /// @uptrace{SWS_UCM_00004}
-    Future<GetSwClusterInfoOutput> GetSwClusterInfo() override;
+    Future<GetSwClusterInfoOutput> GetSwClusterInfo() override;  //active section 
 
     /// @brief Retrieve a Software Package list.
     ///

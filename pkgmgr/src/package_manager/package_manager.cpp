@@ -45,6 +45,7 @@
 #include "package_manager_state/package_manager_state.h"
 #include "interruptible_thread/interruptible_thread.h"
 #include "package_manager_impl/package_manager_impl.h"
+#include "parsing/application.h"
 
 #include <chrono>
 #include <thread>
@@ -73,25 +74,22 @@ namespace ara
             //intialize pkg manager constractor with instance id
             //End//*@Abbas-Salah-gdb*/
             PackageManager::PackageManager(std::unique_ptr<PackageManagerImpl> &&impl, com::InstanceIdentifier instance_id)
-                : Skeleton(instance_id, ara::com::MethodCallProcessingMode::kEvent), impl_{std::move(impl)}, 
-                state_{impl_->RetrieveState(), [this](const PackageManagerState &s) { CurrentStatus.Update(s.GetStatus()); }}
+                : Skeleton(instance_id, ara::com::MethodCallProcessingMode::kEvent), impl_{std::move(impl)},
+                  state_{impl_->RetrieveState(), [this](const PackageManagerState &s) { CurrentStatus.Update(s.GetStatus()); }}
             {
                 CurrentStatus.Update(state_.Get()->GetStatus());
             }
 
             auto PackageManager::Activate(const ActivateOptionType &option) -> decltype(Skeleton::Activate(option))
             {
-                
 
-                    auto accessor = state_.Get();                     
-                    return accessor->Activate(*this, accessor, option);
-
-
+                auto accessor = state_.Get();
+                return accessor->Activate(*this, accessor, option);
             }
 
             auto PackageManager::Cancel(const TransferIdType &id) -> decltype(Skeleton::Cancel(id))
             {
-                
+
                 auto accessor = state_.Get();
                 return accessor->Cancel(id);
             }
@@ -155,8 +153,9 @@ namespace ara
 
             auto PackageManager::ProcessSwPackage(const TransferIdType &id) -> decltype(Skeleton::ProcessSwPackage(id))
             {
+                std::cout<<"\n\n\nProcessing State Start\n\n\n"<<std::endl;;
                 auto accessor = state_.Get();
-                return accessor->ProcessSwPackage(*this, accessor, id);                       
+                return accessor->ProcessSwPackage(*this, accessor, id);
             }
 
             void PackageManager::StartCleanup(Promise<void> promise)
@@ -176,7 +175,7 @@ namespace ara
             {
                 std::thread t(
                     [&](Promise<void> lambdaPromise) {
-                        // imitate the long process   // rolling back proccessing  TODO   
+                        // imitate the long process   // rolling back proccessing  TODO
                         std::this_thread::sleep_for(std::chrono::seconds(1));
                         // inform the state that the action is complete
                         auto accessor = state_.Get();
@@ -189,18 +188,45 @@ namespace ara
 
             void PackageManager::StartActivation(Promise<void> promise, const ActivateOptionType &option)
             {
-                (void)option;
-                                 
-                std::thread t([&](Promise<void> lambdaPromise) {
-                    // imitate the long process 
+                (void)option; // cancled this arguments in this release
+
+                auto fun = [&](Promise<void> lambdaPromise) {
+                    
+                 //  check dependency in State KAdded ,KUpdate ,KPresent
+                 
+                    for (const auto &indexSwclChIn : impl_->GetSwClusterChangeInfo())
+                    {
+
+
+                            std::cout<<indexSwclChIn.Name<<std::endl; 
+                            std::cout<<static_cast<uint8_t>(indexSwclChIn.State)<<std::endl; 
+                            std::cout<<indexSwclChIn.Version<<std::endl; 
+
+                        // for (const auto &indexSwclInfo : impl_->GetSwClusterInfo())
+                        // {
+
+
+                        //     // if (indexSwclChIn.State == SwClusterStateType::kAdded || indexSwclChIn.State == SwClusterStateType::kPresent || indexSwclChIn.State == SwClusterStateType::kUpdated)
+                        //     // {
                                 
+                                
+                        //     // }
+                        //     // else
+                        //     // {
+
+                        //     // }
+                        // }
+                    }
+                     
                     std::this_thread::sleep_for(std::chrono::seconds(1));
                     // inform the state that the action is complete
                     auto accessor = state_.Get();
                     accessor->OnSuccess(*this, accessor);
                     lambdaPromise.set_value();
-                },
-                std::move(promise));
+                };
+
+                std::thread t(fun,
+                              std::move(promise));
                 t.detach();
             }
 
@@ -229,8 +255,8 @@ namespace ara
                 else
                 {
                     auto processingResult = impl_->DoProcessSwPackage(id);
-                   if (processingResult.HasValue())
-                    {   
+                    if (processingResult.HasValue())
+                    {
                         //SWS_UCM_00083
                         accessor->OnProcessSwPackageSucceeded(*this, accessor);
                     }

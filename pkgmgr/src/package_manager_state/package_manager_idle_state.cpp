@@ -4,6 +4,58 @@
 #                                                                                   #
 #                                                                                   #
 #                                                                                   #
+#                          VALEO  GP ADAPTIVE AUTOSAR                               #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                               
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
+#                                                                                   #
 #                                                                                   #
 #                                                                                   #
 #                                                                                   #
@@ -39,6 +91,7 @@ namespace ara
                                                                    StateAccessor &accessor,
                                                                    const TransferIdType &id)
             {
+                std::cout<<"\n\n\nProcessing in IDel State invoke \n\n\n"<<std::endl;
 
                 Promise<void> promise;
                 auto future = promise.get_future();
@@ -51,16 +104,20 @@ namespace ara
                         token,
                         [&accessor](ara::core::Promise<void> &&pr, std::reference_wrapper<PackageManager> p, TransferIdType const &i) {
                             static std::uint8_t countPkgProcessed = 0;
-                            countPkgProcessed += 1;
+                            countPkgProcessed += 1; 
+                             std::cout<<"\n\n\nProcessing Start\n\n\n"<<std::endl;
+
                             auto out = p.get().DoProcessSwPackage(i);
                             if (out.HasValue())
                             {
+                                std::cout<<"\n\n\nProcessing Success Return Value\n\n\n"<<std::endl;
                                 pr.set_value();
                             }
                             else if ((out.Error() == UCMErrorDomainErrc::kProcessSwPackageCancelled) && (countPkgProcessed == 1))
                             {
                                 //[SWS_UCM_00149]
                                 countPkgProcessed = 0;
+                                std::cout<<"\n\n\nProcessing Faild Return Value and return to Idel state\n\n\n"<<std::endl;
                                 accessor.Reset(std::make_unique<PackageManagerIdleState>());
                                 pr.SetError(out.Error());
                             }

@@ -47,6 +47,8 @@ namespace pkgmgr
 
 Result<void, ErrorCode> RemoveAction::Execute()
 {
+     std::cout<<"Remove Action Start"<<std::endl;
+
     // marks the swcl for removal
     if (fs_.DoesDirectoryExist(finalDestinationPath_)) {
         revertAndCommitLocker_ = false;

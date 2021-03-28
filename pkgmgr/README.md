@@ -39,15 +39,3 @@ See the root README.md file of this FC.
 ## 3. Known limitations
 
 See the root README.md file of this FC.
-
-## 4. Last Update Section V1.0
-
-develop ucm processing sw pkg and some state incomplete 
-   
-   * ProcessingSwPackage State Created      following AUTOSAR_EXP_FCUpdate&configrationManagement
-    
-     - </br>![Status Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)
-    
-     - </br>![STATE MACHINE](https://github.com/ELabbassalah56/UCM_MOdule/blob/main/pkgmgr/doc/images/swclState.png?raw=true)
-  * UCM Static Analysis using CPP_Check
-    - </br>![Status Status](https://github.com/ELabbassalah56/UCM_MOdule/blob/main/pkgmgr/doc/images/StaticAnalysis.png?raw=true)

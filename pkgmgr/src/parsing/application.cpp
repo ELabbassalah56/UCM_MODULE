@@ -134,7 +134,7 @@ ara::core::Vector<String> Application::GetApplicationDependencies(
     if (!status) {
         logger().LogError() << "Error while parsing application manifest for application " << applicationName_
                             << " at path " << manifestPath_ << ". Error: " << status.Error().Message();
-        return {};
+        return {};                  
     }
 
     auto startupConfigs = kvstmp.GetArray<KvsType>();

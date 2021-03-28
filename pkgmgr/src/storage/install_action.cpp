@@ -49,7 +49,10 @@ namespace pkgmgr
 using String = ara::core::String;
 
 Result<void, ErrorCode> InstallAction::Execute()
-{  // creates the parent folder of the installed swcl e.g. /usr/var/apdtest/ucm/optupdateDir/swcls/swcl_EBA
+{  
+    
+    std::cout<<"Install Action Start"<<std::endl;
+    // creates the parent folder of the installed swcl e.g. /usr/var/apdtest/ucm/optupdateDir/swcls/swcl_EBA
     const String finalDestPathParentDirectory
         = finalDestinationPath_.substr(0, finalDestinationPath_.find_last_of("/"));
     bool intermediateRes = boost::filesystem::create_directories(finalDestPathParentDirectory.c_str());

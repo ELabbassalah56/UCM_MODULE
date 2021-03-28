@@ -82,6 +82,10 @@ PackageManagerImpl::~PackageManagerImpl() = default;
 
 Result<void> PackageManagerImpl::ProcessSoftwarePackage(Streamable& package)
 {
+
+
+    std::cout<<"\n\n\nProcessing SW PAkage INVOKE \n\n\n"<<std::endl;
+
     auto path = package.GetPackagePath();
 
     log_.LogInfo() << "Processing software package at path " << path;
@@ -114,11 +118,19 @@ Result<void> PackageManagerImpl::ProcessSoftwarePackage(Streamable& package)
 
     // Create, execute and maybe store the action to make it possible to revert or commit it later
     {
+         std::cout<<"\n\n\nProcessing SW PAkage INVOKE Action Take  \n\n\n"<<std::endl;
+
         std::unique_ptr<ReversibleAction> currentAction = ActionGenerator()(installDirectory_, *softwarePackage);
         if (currentAction) {
             Result<void> result = currentAction->Execute();
+
+            std::cout<<"\n\n\nProcessing SW PAkage INVOKE ACtion : "<<"\n\n\n"<<std::endl;
+            
+            
             if (result.HasValue()) {
+
                 SWCLManager_->AddSWCLChangeInfo(*softwarePackage);
+              
                 for( const auto& index : SWCLManager_->GetSWCLsForActivation() )
                 {
                     switch (index.GetSwclState()) 
@@ -167,6 +179,10 @@ Result<void> PackageManagerImpl::ProcessSoftwarePackage(Streamable& package)
             }
         } else {
             // action is not created, because its type is unknown
+            std::cout<<"\n\n******************  ERROR NOT FOUND 404 *****************\n\n\t\t"<<std::endl;        
+            log_.LogError() << "Action is not supported";
+            std::cout<<"\n\n******************  ERROR NOT FOUND 404 *****************\n\n"<<std::endl;        
+      
         }
     }
 
@@ -185,7 +201,7 @@ Result<void> PackageManagerImpl::DoProcessSwPackage(const TransferIdType& id)
     if (!package) {
         return Result<void>::FromError(UCMErrorDomainErrc::kInvalidTransferId);
     } else {
-        return ProcessSoftwarePackage(*package);
+        return ProcessSoftwarePackage(*package);  
     }
 }
 core::String PackageManagerImpl::GetExtractionTargetDirectory(const core::String& fullFilePath) const
@@ -234,23 +250,6 @@ TransferDataFuture PackageManagerImpl::TransferData(const TransferIdType& id,
     }
     return future;
 }
-
-//abbas
-bool PackageManagerImpl::CheckUCMDependecies()
-{
-    for(auto info : appInfo_->GetDependencies())
-    {
-        std::cout<< info << std::endl;
-        
-    }
-    return true;
-}
-
-
-//abbas
-
-
-
 
 TransferExitFuture PackageManagerImpl::TransferExit(const TransferIdType& id)
 {

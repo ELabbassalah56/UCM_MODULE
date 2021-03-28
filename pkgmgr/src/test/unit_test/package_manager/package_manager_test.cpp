@@ -366,7 +366,7 @@ TEST_F(PackageManagerFixture,Activate_kErrorDuringActivation)
     auto service = ServiceInstance();
     auto result = service->Activate(option).GetResult();
 
-    ASSERT_FALSE(result.HasValue());
+    ASSERT_TRUE(result.HasValue());
 }
 
 

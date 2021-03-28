@@ -49,10 +49,13 @@ namespace pkgmgr
 using String = ara::core::String;
 
 Result<void, ErrorCode> UpdateAction::Execute()
-{  // get the parent folder of the installed swcl e.g. /usr/var/apdtest/ucm/opt/updateDir/swcls/swcl_EBA
+{  
+    
+     std::cout<<"Update Action Start"<<std::endl;
+    // get the parent folder of the installed swcl e.g. /usr/var/apdtest/ucm/opt/updateDir/swcls/swcl_EBA
     const String finalDestPathParentDirectory
         = finalDestinationPath_.substr(0, finalDestinationPath_.find_last_of("/"));
-
+     
     // verifies that the swcl is already existing on the target, otherwise, abort the update action
     if (!fs_.DoesDirectoryExist(finalDestPathParentDirectory)) {
         log_.LogWarn()
@@ -65,11 +68,15 @@ Result<void, ErrorCode> UpdateAction::Execute()
             log_.LogWarn() << "same version of the swcl is already installed";
             return Result<void>::FromError(UCMErrorDomainErrc::kProcessedSoftwarePackageInconsistent);
 
-        } else {  // creates the final directory in which the updated swcl will be stored e.g.
-                  // ucm/opt/updateDir/swcls/swcl_EBA/2.0.0
+        } else {  
+            // creates the final directory in which the updated swcl will be stored e.g.
+            // ucm/opt/updateDir/swcls/swcl_EBA/2.0.0
+            std::cout<<finalDestPathParentDirectory<<std::endl<<"final Destination Parent"<<std::endl;
+            std::cout<<finalDestinationPath_<<std::endl<<"final Destination Parent"<<std::endl;
+
             // and moves inside this directory the content of the folder containing the extracted software package
             auto res = fs_.MoveDirectory(package_.GetExtractionPath(), finalDestinationPath_);
-
+            
             if (res.HasValue()) {
                 revertAndCommitLocker_ = false;
                 return {};
