@@ -136,6 +136,9 @@ add_library(pm_common OBJECT
 	parsing/software_cluster_list_builder.cpp
 	parsing/version_report_impl.cpp
 	parsing/version.cpp
+	parsing/ucm_parsing_info.cpp
+	parsing/ucm_info.cpp
+    
 
 	${pmMiddlewareInterfaces_SOURCES}
 )
