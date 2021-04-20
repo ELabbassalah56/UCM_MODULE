@@ -1,0 +1,57 @@
+#  --------------------------------------------------------------------------
+#  |              _    _ _______     .----.      _____         _____        |
+#  |         /\  | |  | |__   __|  .  ____ .    / ____|  /\   |  __ \       |
+#  |        /  \ | |  | |  | |    .  / __ \ .  | (___   /  \  | |__) |      |
+#  |       / /\ \| |  | |  | |   .  / / / / v   \___ \ / /\ \ |  _  /       |
+#  |      / /__\ \ |__| |  | |   . / /_/ /  .   ____) / /__\ \| | \ \       |
+#  |     /________\____/   |_|   ^ \____/  .   |_____/________\_|  \_\      |
+#  |                              . _ _  .                                  |
+#  --------------------------------------------------------------------------
+#
+#  All Rights Reserved.
+#  Any use of this source code is subject to a license agreement with the
+#  AUTOSAR development cooperation.
+#  More information is available at www.autosar.org.
+#
+#  Disclaimer
+#
+#  This work (specification and/or software implementation) and the material
+#  contained in it, as released by AUTOSAR, is for the purpose of information
+#  only. AUTOSAR and the companies that have contributed to it shall not be
+#  liable for any use of the work.
+#
+#  The material contained in this work is protected by copyright and other
+#  types of intellectual property rights. The commercial exploitation of the
+#  material contained in this work requires a license to such intellectual
+#  property rights.
+#
+#  This work may be utilized or reproduced without any modification, in any
+#  form or by any means, for informational purposes only. For any other
+#  purpose, no part of the work may be utilized or reproduced, in any form
+#  or by any means, without permission in writing from the publisher.
+#
+#  The work has been developed for automotive applications only. It has
+#  neither been developed, nor tested for non-automotive applications.
+#
+#  The word AUTOSAR and the AUTOSAR logo are registered trademarks.
+#  --------------------------------------------------------------------------
+
+# Config file for the arxmls package
+# It defines the following variables
+set(ARA_ARXMLS_VERSION @PROJECT_VERSION@)
+set(ARA_ARXMLS_VERSION_STRING "@PROJECT_VERSION@")
+
+# This section is needed to bind ARA_ARXMLS to the right path
+# regardless of bitbake or SDK builds.
+# * OECORE_NATIVE_SYSROOT is provided by the SDKs env-script
+# * CONFIG_DEFAULT_ARXMLS are set in the arxmls/CMakeLists.txt to a default path.
+if(DEFINED ENV{OECORE_NATIVE_SYSROOT})
+  set(ARA_ARXMLS_DIR "$ENV{OECORE_NATIVE_SYSROOT}@CONFIG_DEFAULT_ARXMLS@")
+else()
+  set(ARA_ARXMLS_DIR "${CMAKE_CURRENT_LIST_DIR}/")
+endif()
+
+set(ARA_ARXMLS "")
+FOREACH(f "@ARXML_FILES@")
+  LIST(APPEND ARA_ARXMLS "${ARA_ARXMLS_DIR}${f}")
+ENDFOREACH(f)

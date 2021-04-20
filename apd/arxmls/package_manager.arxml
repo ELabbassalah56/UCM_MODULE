@@ -1,0 +1,2106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00045.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ara</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>ucm</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>datatypes</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>compumethods</SHORT-NAME>
+                  <ELEMENTS>
+                    <COMPU-METHOD UUID="">
+                      <SHORT-NAME>CM_ActionType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kUpdate</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kInstall</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kRemove</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="db1c9901-e4bd-3dd0-b964-c392473d2701">
+                      <SHORT-NAME>CM_ActivateOptionType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kDefault</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kFunctionGroupRestart</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kSystemReset</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="0a034ab5-5449-37bf-8ded-2d8c9ae4fd6e">
+                      <SHORT-NAME>CM_ActivateReturnType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kSuccess</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kErrorNoProcessedPackages</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kErrorDuringActivation</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kErrorNoValidProcessing</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kMissingDependencies</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="6e299de8-b07a-3ebe-9eb3-529d6ea9a538">
+                      <SHORT-NAME>CM_CancelReturnType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kSuccess</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kError</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kOperationNotPermitted</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="863a0f80-6082-346d-97a5-f7cca15bbeb0">
+                      <SHORT-NAME>CM_FinishReturnType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kSuccess</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kUndefinedError</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kOperationNotPermitted</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="a5b8dca3-bf25-31d6-ae8b-7b11b6021505">
+                      <SHORT-NAME>CM_GeneralResponseType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kSuccess</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kGeneralReject</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kGeneralMemoryError</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kTransferIdInvalid</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kOperationNotPermitted</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="4e332156-c2e3-3b0b-bb90-8327af114942">
+                      <SHORT-NAME>CM_LogLevelType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kOff</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kFatal</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kError</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kWarning</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kInfo</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">5</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">5</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kDebug</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">6</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">6</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kVerbose</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="ce8776b0-ac45-3537-9113-b6a1cfdf9bc6">
+                      <SHORT-NAME>CM_PackageManagerStatusType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kReady</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kProcessing</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kActivating</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kCleaningUp</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kActivated</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">5</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">5</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kRolledBack</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">6</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">6</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kRollingBack</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">7</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">7</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kVerifying</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="d50ffa81-0082-3c8d-897b-56edcb34d8a1">
+                      <SHORT-NAME>CM_ProcessResultType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kSuccess</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kReject</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kInvalidManifest</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kPackageInconsistent</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kInsufficientMemory</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">5</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">5</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kInvalidTransferId</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">6</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">6</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kOperationNotPermitted</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="">
+                      <SHORT-NAME>CM_ResolutionType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kSuccessfull</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kFailed</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="0b5d76ec-f32c-326c-8c94-d07c95480777">
+                      <SHORT-NAME>CM_RevertProcessedSwPackagesReturnType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kSuccess</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kNothingToRevert</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kNotAbleToRevertPackages</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="82f7c685-57ca-347f-97d5-153011b1ac68">
+                      <SHORT-NAME>CM_RollbackReturnType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kSuccess</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kNothingToRollback</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kNotAbleToRollback</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="9a5bd65f-9d8a-3764-9b4e-4ae4baad2d8f">
+                      <SHORT-NAME>CM_SwClusterInfoStateType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kPresent</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kAdded</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kUpdated</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kRemoved</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="a57e658d-ab59-322c-9b0c-593dae9c34da">
+                      <SHORT-NAME>CM_SwPackageInfoStateType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kTransferring</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kTransferred</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kProcessing</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="b09d136d-eda1-36e2-9536-7f0e2c713420">
+                      <SHORT-NAME>CM_TransferDataReturnType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kSuccess</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kIncorrectBlock</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kIncorrectSize</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kInsufficientMemory</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kInvalidTransferId</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">5</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">5</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kOperationNotPermitted</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="691c65ee-5679-3203-83d8-7e1a23ceef3d">
+                      <SHORT-NAME>CM_TransferExitReturnType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kSuccess</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kInsufficientData</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kPackageInconsistent</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kInvalidTransferId</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kOperationNotPermitted</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="d601fea1-cf4a-37bc-b299-765ead9976cc">
+                      <SHORT-NAME>CM_TransferStartSuccessType</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kSuccess</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>kInsufficientMemory</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE>
+                  <SHORT-NAME>extensions</SHORT-NAME>
+                  <ELEMENTS>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>ActionTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/ActionType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>ActivateOptionTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/ActivateOptionType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>ActivateReturnTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/ActivateReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>ByteVectorTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/ByteVectorType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>CancelReturnTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/CancelReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>FinishReturnTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/FinishReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>GeneralResponseTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/GeneralResponseType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>GetHistoryTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/GetHistoryType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>GetHistoryVectorTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/GetHistoryVectorType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>LogEntryTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/LogEntryType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>LogLevelTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/LogLevelType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>LogVectorTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/LogVectorType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>PackageManagerStatusTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/PackageManagerStatusType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>ProcessResultTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/ProcessResultType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>ProcessSwPackageReturnTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/ProcessSwPackageReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION UUID="">
+                      <SHORT-NAME>ResolutionTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/ResultType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>RevertProcessedSwPackagesReturnTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/RevertProcessedSwPackagesReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>RollbackReturnTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/RollbackReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>SwClusterInfoStateTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/SwClusterStateType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>SwClusterInfoTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/SwClusterInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>SwClusterInfoVectorTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/SwClusterInfoVectorType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>SwInfoNameExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/SwInfoName</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>SwPackageInfoStateTypeExt</SHORT-NAME>
+                      <CATEGORY></CATEGORY>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/SwPackageStateType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>SwPackageInfoTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/SwPackageInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>SwPackageInfoVectorTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/SwPackageInfoVectorType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>TransferDataReturnTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferDataReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>TransferExitReturnTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferExitReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>TransferIdTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>TransferStartReturnTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferStartReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                    <IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                      <SHORT-NAME>TransferStartSuccessTypeExt</SHORT-NAME>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferStartSuccessType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                    </IMPLEMENTATION-DATA-TYPE-EXTENSION>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE>
+                  <SHORT-NAME>implementationdatatypes</SHORT-NAME>
+                  <ELEMENTS>
+                    <IMPLEMENTATION-DATA-TYPE S="" UUID="">
+                      <SHORT-NAME>ActionType</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/ara/ucm/datatypes/compumethods/CM_ActionType</COMPU-METHOD-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt8</IMPLEMENTATION-DATA-TYPE-REF>
+                            <ADDITIONAL-NATIVE-TYPE-QUALIFIER></ADDITIONAL-NATIVE-TYPE-QUALIFIER>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE S="" UUID="3094ec8c-a3d7-3644-b568-26cd9f59c232">
+                      <SHORT-NAME>ActivateOptionType</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/ara/ucm/datatypes/compumethods/CM_ActivateOptionType</COMPU-METHOD-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt8</IMPLEMENTATION-DATA-TYPE-REF>
+                            <ADDITIONAL-NATIVE-TYPE-QUALIFIER></ADDITIONAL-NATIVE-TYPE-QUALIFIER>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="1cb0cba6-46c2-3572-98ca-e898e0c180d7">
+                      <SHORT-NAME>ActivateReturnType</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/ara/ucm/datatypes/compumethods/CM_ActivateReturnType</COMPU-METHOD-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt8</IMPLEMENTATION-DATA-TYPE-REF>
+                            <ADDITIONAL-NATIVE-TYPE-QUALIFIER></ADDITIONAL-NATIVE-TYPE-QUALIFIER>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="ce988831-16c4-313a-aaad-afbb021d43d6">
+                      <SHORT-NAME>ByteVectorType</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/ByteArray</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="3f087ce2-ec5c-37cc-b2f8-5e3dc8b5b5f2">
+                      <SHORT-NAME>CancelReturnType</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/ara/ucm/datatypes/compumethods/CM_CancelReturnType</COMPU-METHOD-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt8</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="83cdc4b4-da7a-3ace-9276-0de38fa597f8">
+                      <SHORT-NAME>FinishReturnType</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/ara/ucm/datatypes/compumethods/CM_FinishReturnType</COMPU-METHOD-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt8</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="3397401f-16dd-3e92-82a5-8db6f59a5a04">
+                      <SHORT-NAME>GeneralResponseType</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/ara/ucm/datatypes/compumethods/CM_GeneralResponseType</COMPU-METHOD-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt8</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="">
+                      <SHORT-NAME>GetHistoryType</SHORT-NAME>
+                      <CATEGORY>STRUCTURE</CATEGORY>
+                      <SUB-ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="">
+                          <SHORT-NAME>Time</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <DISPLAY-FORMAT></DISPLAY-FORMAT>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt64</IMPLEMENTATION-DATA-TYPE-REF>
+                                <MC-FUNCTION></MC-FUNCTION>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="">
+                          <SHORT-NAME>Name</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/SwInfoName</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="">
+                          <SHORT-NAME>Version</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/String</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="">
+                          <SHORT-NAME>Action</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/ActionType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="">
+                          <SHORT-NAME>Resolution</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/ResultType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      </SUB-ELEMENTS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="">
+                      <SHORT-NAME>GetHistoryVectorType</SHORT-NAME>
+                      <CATEGORY>VECTOR</CATEGORY>
+                      <SUB-ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="">
+                          <SHORT-NAME>GetHistoryElement</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/GetHistoryType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      </SUB-ELEMENTS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="f1320116-c670-3e94-aded-7d74972a0bdd">
+                      <SHORT-NAME>LogEntryType</SHORT-NAME>
+                      <CATEGORY>STRUCTURE</CATEGORY>
+                      <SUB-ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="c153bd7e-6f2c-34fc-b8a9-9522bd58e4bf">
+                          <SHORT-NAME>LogLevel</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/LogLevelType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="88530454-36b4-3142-9f6b-4fd464014cca">
+                          <SHORT-NAME>Message</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/String</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      </SUB-ELEMENTS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="6ffa8e83-5f67-30b8-b1d9-4dd6103c6011">
+                      <SHORT-NAME>LogLevelType</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/ara/ucm/datatypes/compumethods/CM_LogLevelType</COMPU-METHOD-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt8</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="b8d5b140-0040-372b-88d0-576219161494">
+                      <SHORT-NAME>LogVectorType</SHORT-NAME>
+                      <CATEGORY>VECTOR</CATEGORY>
+                      <SUB-ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="68733eef-7037-34a0-9a2a-61e840b7126e">
+                          <SHORT-NAME>LogEntryElement</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/LogEntryType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      </SUB-ELEMENTS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="f5d7a702-acb2-38c4-83c3-2f68ae1f9806">
+                      <SHORT-NAME>PackageManagerStatusType</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/ara/ucm/datatypes/compumethods/CM_PackageManagerStatusType</COMPU-METHOD-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt8</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="fbcced6d-1682-33f6-9400-572412418ceb">
+                      <SHORT-NAME>ProcessResultType</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/ara/ucm/datatypes/compumethods/CM_ProcessResultType</COMPU-METHOD-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt8</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="e5ac94a3-2b6a-3ee4-ba0b-61bd6ba1703b">
+                      <SHORT-NAME>ProcessSwPackageReturnType</SHORT-NAME>
+                      <CATEGORY>STRUCTURE</CATEGORY>
+                      <SUB-ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="13f4b669-4751-30d3-92b0-e22caf425c16">
+                          <SHORT-NAME>result</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/ProcessResultType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="c83f0e0e-58d8-365f-81d2-af234ed3de1a">
+                          <SHORT-NAME>transferId</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      </SUB-ELEMENTS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE S="" UUID="">
+                      <SHORT-NAME>ResultType</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/ara/ucm/datatypes/compumethods/CM_ResolutionType</COMPU-METHOD-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt8</IMPLEMENTATION-DATA-TYPE-REF>
+                            <ADDITIONAL-NATIVE-TYPE-QUALIFIER></ADDITIONAL-NATIVE-TYPE-QUALIFIER>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                      <TYPE-EMITTER></TYPE-EMITTER>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="ba734a70-9d6a-3447-8554-1ec5493f6948">
+                      <SHORT-NAME>RevertProcessedSwPackagesReturnType</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/ara/ucm/datatypes/compumethods/CM_RevertProcessedSwPackagesReturnType</COMPU-METHOD-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt8</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="3671dcff-54e5-32d6-81b1-e4faa09b7eee">
+                      <SHORT-NAME>RollbackReturnType</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/ara/ucm/datatypes/compumethods/CM_RollbackReturnType</COMPU-METHOD-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt8</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="f4836727-7fa5-34a8-ad40-fa21b556760a">
+                      <SHORT-NAME>SwClusterInfoType</SHORT-NAME>
+                      <CATEGORY>STRUCTURE</CATEGORY>
+                      <SUB-ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="bfd93275-ab62-32b3-8fc9-317125858569">
+                          <SHORT-NAME>Name</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/SwInfoName</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="e537d937-0735-3db5-b4ba-549d8be33163">
+                          <SHORT-NAME>Version</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/String</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="7b0735e9-bb33-3010-8239-ef81bf209b83">
+                          <SHORT-NAME>State</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/SwClusterStateType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      </SUB-ELEMENTS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="377cf335-1ac1-3357-b6dd-d60c17480328">
+                      <SHORT-NAME>SwClusterInfoVectorType</SHORT-NAME>
+                      <CATEGORY>VECTOR</CATEGORY>
+                      <SUB-ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="be5aa830-f2e9-36d4-ad5b-1d7028529946">
+                          <SHORT-NAME>SwClusterInfoElement</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/SwClusterInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      </SUB-ELEMENTS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="4a181bdf-4eec-3093-9945-8a6334d85491">
+                      <SHORT-NAME>SwClusterStateType</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/ara/ucm/datatypes/compumethods/CM_SwClusterInfoStateType</COMPU-METHOD-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt8</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="8230de86-881d-3fec-ab6c-0c71771a3138">
+                      <SHORT-NAME>SwInfoName</SHORT-NAME>
+                      <CATEGORY>STRING</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/String</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="18003c0f-b6af-310d-9400-2fab0d008621">
+                      <SHORT-NAME>SwPackageInfoType</SHORT-NAME>
+                      <CATEGORY>STRUCTURE</CATEGORY>
+                      <SUB-ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="bdffc71b-2d14-321a-a575-8cdaccbe420b">
+                          <SHORT-NAME>Name</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/SwInfoName</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="95d029f8-564a-3093-8649-5aa53c6deae2">
+                          <SHORT-NAME>Version</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/String</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="40ca1beb-ab76-3d79-b2d6-c532749a38bb">
+                          <SHORT-NAME>TransferID</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="d8be3b95-5977-3e8c-8355-3bf9b6b3b53c">
+                          <SHORT-NAME>State</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/SwPackageStateType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      </SUB-ELEMENTS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="f551c319-9681-35b4-a6a1-e03cb8f7528e">
+                      <SHORT-NAME>SwPackageInfoVectorType</SHORT-NAME>
+                      <CATEGORY>VECTOR</CATEGORY>
+                      <SUB-ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="3b604387-7c49-3ba2-b72e-410cb8b65a63">
+                          <SHORT-NAME>SwPackageInfoElement</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/SwPackageInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      </SUB-ELEMENTS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="3fa56ced-6716-3304-8ab6-6e243394c65f">
+                      <SHORT-NAME>SwPackageStateType</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/ara/ucm/datatypes/compumethods/CM_SwPackageInfoStateType</COMPU-METHOD-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt8</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="d3079e80-dfee-3637-ad18-daf651f757c8">
+                      <SHORT-NAME>TransferDataReturnType</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/ara/ucm/datatypes/compumethods/CM_TransferDataReturnType</COMPU-METHOD-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt8</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="835686c3-6157-3052-b961-4619d0524850">
+                      <SHORT-NAME>TransferExitReturnType</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/ara/ucm/datatypes/compumethods/CM_TransferExitReturnType</COMPU-METHOD-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt8</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="e3e96ede-e339-33bc-9045-e3d578915df8">
+                      <SHORT-NAME>TransferIdType</SHORT-NAME>
+                      <CATEGORY>VALUE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <BASE-TYPE-REF DEST="SW-BASE-TYPE">/ara/stdtypes/std_uint64_t</BASE-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="dcd83ebc-525c-3198-9cfc-28c5fd81b837">
+                      <SHORT-NAME>TransferStartReturnType</SHORT-NAME>
+                      <CATEGORY>STRUCTURE</CATEGORY>
+                      <SUB-ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="785bc5ac-fbb9-3ec0-b86c-08ab860a584a">
+                          <SHORT-NAME>TransferId</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="e250760e-61fc-3da2-b759-5a817add66f8">
+                          <SHORT-NAME>TransferStartSuccess</SHORT-NAME>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferStartSuccessType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      </SUB-ELEMENTS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                    <IMPLEMENTATION-DATA-TYPE UUID="d1482450-79f0-3602-9f46-6de6e1fc7f2d">
+                      <SHORT-NAME>TransferStartSuccessType</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/ara/ucm/datatypes/compumethods/CM_TransferStartSuccessType</COMPU-METHOD-REF>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt8</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+            <AR-PACKAGE>
+              <SHORT-NAME>pkgmgr</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>exec</SHORT-NAME>
+                  <ELEMENTS>
+                    <EXECUTABLE UUID="026d91ba-3b20-307f-b62b-8588eca92dd3">
+                      <SHORT-NAME>PackageManager_exe</SHORT-NAME>
+                      <ROOT-SW-COMPONENT-PROTOTYPE UUID="e0a1b91e-6c29-345e-909f-47b82f4d322f">
+                        <SHORT-NAME>PackageManager_root</SHORT-NAME>
+                      </ROOT-SW-COMPONENT-PROTOTYPE>
+                    </EXECUTABLE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE>
+                  <SHORT-NAME>portinterfaces</SHORT-NAME>
+                  <ELEMENTS>
+                    <SERVICE-INTERFACE UUID="005780c9-7dfb-3bcb-b10d-f7d8df860d0c">
+                      <SHORT-NAME>PackageManagement</SHORT-NAME>
+                      <IS-SERVICE>false</IS-SERVICE>
+                      <NAMESPACES>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ara</SHORT-NAME>
+                          <SYMBOL>ara</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>ucm</SHORT-NAME>
+                          <SYMBOL>ucm</SYMBOL>
+                        </SYMBOL-PROPS>
+                        <SYMBOL-PROPS>
+                          <SHORT-NAME>pkgmgr</SHORT-NAME>
+                          <SYMBOL>pkgmgr</SYMBOL>
+                        </SYMBOL-PROPS>
+                      </NAMESPACES>
+                      <FIELDS>
+                        <FIELD UUID="06b52c53-f795-3805-9238-929dac36f450">
+                          <SHORT-NAME>CurrentStatus</SHORT-NAME>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/PackageManagerStatusType</TYPE-TREF>
+                          <HAS-GETTER>true</HAS-GETTER>
+                          <HAS-NOTIFIER>true</HAS-NOTIFIER>
+                          <HAS-SETTER>false</HAS-SETTER>
+                          <INIT-VALUE>
+                            <NUMERICAL-VALUE-SPECIFICATION>
+                              <VALUE>0</VALUE>
+                            </NUMERICAL-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </FIELD>
+                      </FIELDS>
+                      <METHODS>
+                        <CLIENT-SERVER-OPERATION UUID="9b3e2726-2c2f-3231-93e5-a9c1bff6a39c">
+                          <SHORT-NAME>Activate</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="7084f60c-9e4f-36eb-9cf8-762acc75b6d5">
+                              <SHORT-NAME>result</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/ActivateReturnType</TYPE-TREF>
+                              <DIRECTION>OUT</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="757ea0af-405d-363a-ba6f-327ccda7d920">
+                              <SHORT-NAME>option</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/ActivateOptionType</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                          <FIRE-AND-FORGET>false</FIRE-AND-FORGET>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="ecaa1a99-c860-392e-b293-7efa8a165b81">
+                          <SHORT-NAME>Cancel</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="41b97ada-1196-3af6-b3da-567fd9627610">
+                              <SHORT-NAME>id</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferIdType</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="e67cc171-771c-30fa-9220-316520ce1bf5">
+                              <SHORT-NAME>result</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/CancelReturnType</TYPE-TREF>
+                              <DIRECTION>OUT</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                          <FIRE-AND-FORGET>false</FIRE-AND-FORGET>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="fedee05a-e553-3cb1-9f70-7d6adbfe53c8">
+                          <SHORT-NAME>DeleteTransfer</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="5ad1e5b5-9a32-3f2b-b785-32a28d54801d">
+                              <SHORT-NAME>id</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferIdType</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="521923b5-4129-32c9-a8a2-827cd33f3392">
+                              <SHORT-NAME>result</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/GeneralResponseType</TYPE-TREF>
+                              <DIRECTION>OUT</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                          <FIRE-AND-FORGET>false</FIRE-AND-FORGET>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="e98b8a46-85c7-3d00-aae0-cba6a9fedc46">
+                          <SHORT-NAME>Finish</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="f515dcea-2093-392c-8d43-aa2315bb5c80">
+                              <SHORT-NAME>result</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/FinishReturnType</TYPE-TREF>
+                              <DIRECTION>OUT</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                          <FIRE-AND-FORGET>false</FIRE-AND-FORGET>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION>
+                          <SHORT-NAME>GetHistory</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE>
+                              <SHORT-NAME>history</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/GetHistoryVectorType</TYPE-TREF>
+                              <DIRECTION>OUT</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="7a5d8e8c-2315-4047-bf86-ff427921f25b">
+                              <SHORT-NAME>timestampGE</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt64</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="722b5ea0-3d36-4cec-ab01-06ae08006a16">
+                              <SHORT-NAME>timestampLT</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt64</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                          <FIRE-AND-FORGET>false</FIRE-AND-FORGET>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="1a34615d-9a94-3b1c-9266-5a2a8aec9304">
+                          <SHORT-NAME>GetLog</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="2f6c12f7-3124-34a6-8247-943d54cbb337">
+                              <SHORT-NAME>id</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferIdType</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="bc9386ab-f9ea-30f5-9967-15e197cec817">
+                              <SHORT-NAME>log</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/LogVectorType</TYPE-TREF>
+                              <DIRECTION>OUT</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                          <FIRE-AND-FORGET>false</FIRE-AND-FORGET>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="80b973d3-8736-3a33-9a17-4721260fd1fe">
+                          <SHORT-NAME>GetSwClusterChangeInfo</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="f806a347-6262-3054-84ee-ac254083ee3b">
+                              <SHORT-NAME>SwInfo</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/SwClusterInfoVectorType</TYPE-TREF>
+                              <DIRECTION>OUT</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                          <FIRE-AND-FORGET>false</FIRE-AND-FORGET>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="6c5f97ef-5125-366d-bb47-78d7507c913d">
+                          <SHORT-NAME>GetSwClusterInfo</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="b7cde24c-cddf-345b-8b1f-02324b6855fa">
+                              <SHORT-NAME>SwInfo</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/SwClusterInfoVectorType</TYPE-TREF>
+                              <DIRECTION>OUT</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                          <FIRE-AND-FORGET>false</FIRE-AND-FORGET>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="69671179-cb56-37b1-92e9-91ac8f2a36cc">
+                          <SHORT-NAME>GetSwPackages</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="029b2313-d4e1-3d93-b1e1-c7778262273c">
+                              <SHORT-NAME>Packages</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/SwPackageInfoVectorType</TYPE-TREF>
+                              <DIRECTION>OUT</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                          <FIRE-AND-FORGET>false</FIRE-AND-FORGET>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="1a45759e-1c0d-3526-9107-0c60aa6b3884">
+                          <SHORT-NAME>GetSwProcessProgress</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="9076dcf7-4b61-3ae3-b2d3-69f0a1762db3">
+                              <SHORT-NAME>id</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferIdType</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="391079b3-51ce-3d83-a4d0-1e2c36d7fbd5">
+                              <SHORT-NAME>progress</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt8</TYPE-TREF>
+                              <DIRECTION>OUT</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                          <FIRE-AND-FORGET>false</FIRE-AND-FORGET>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="8b553fc2-750f-320f-be3d-9da8b10663dc">
+                          <SHORT-NAME>ProcessSwPackage</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="a2bf601e-8cb3-3e31-9b4f-09bacb94e53c">
+                              <SHORT-NAME>id</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferIdType</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="7c560217-2125-32e6-afe8-b74f7e57f647">
+                              <SHORT-NAME>result</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/ProcessSwPackageReturnType</TYPE-TREF>
+                              <DIRECTION>OUT</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                          <FIRE-AND-FORGET>false</FIRE-AND-FORGET>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="6be28583-7d41-3ac2-b6ff-f4ebcc6eac5f">
+                          <SHORT-NAME>RevertProcessedSwPackages</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="e1c501ec-971d-3ad9-bb7e-a75d1af2d5b8">
+                              <SHORT-NAME>result</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/RevertProcessedSwPackagesReturnType</TYPE-TREF>
+                              <DIRECTION>OUT</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                          <FIRE-AND-FORGET>false</FIRE-AND-FORGET>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="c5af9690-e4e7-330e-88fd-9556b92de2c3">
+                          <SHORT-NAME>Rollback</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="874f096a-ef03-3a34-b6c3-3466539f00bf">
+                              <SHORT-NAME>result</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/RollbackReturnType</TYPE-TREF>
+                              <DIRECTION>OUT</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                          <FIRE-AND-FORGET>false</FIRE-AND-FORGET>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="a55e0b54-2d66-3cdb-be7e-3d64c1bf43f5">
+                          <SHORT-NAME>SetLogLevel</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="2e0f371c-6b90-37ee-9ca1-bbf1f569a763">
+                              <SHORT-NAME>id</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferIdType</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="c4600ca4-5b88-3a70-bcc2-bee0eb06d3e1">
+                              <SHORT-NAME>logLevel</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/LogLevelType</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                          <FIRE-AND-FORGET>false</FIRE-AND-FORGET>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="ae2db080-6bc8-3b49-b684-cac114b5cab4">
+                          <SHORT-NAME>TransferData</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="7fbaa107-2f49-39fe-9e35-fdea68e16e30">
+                              <SHORT-NAME>id</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferIdType</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="8d3cf98a-a454-3768-b0a7-866adb862b89">
+                              <SHORT-NAME>data</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/ByteVectorType</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="2692d274-eb4b-3286-b0d7-e40e89ed56d6">
+                              <SHORT-NAME>blockCounter</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt32</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="3fc14948-7c16-3cf8-892c-d849582e9579">
+                              <SHORT-NAME>result</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferDataReturnType</TYPE-TREF>
+                              <DIRECTION>OUT</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                          <FIRE-AND-FORGET>false</FIRE-AND-FORGET>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="04c8ed9d-ca9e-3c88-9698-ade03f574efc">
+                          <SHORT-NAME>TransferExit</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="f4928a49-7df3-384a-802d-08136a9a1f2a">
+                              <SHORT-NAME>id</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferIdType</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="62ed80fe-742b-3393-9a14-dcdf2cf07381">
+                              <SHORT-NAME>result</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferExitReturnType</TYPE-TREF>
+                              <DIRECTION>OUT</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                          <FIRE-AND-FORGET>false</FIRE-AND-FORGET>
+                        </CLIENT-SERVER-OPERATION>
+                        <CLIENT-SERVER-OPERATION UUID="908eb068-3fee-377e-a614-b4a1167ba758">
+                          <SHORT-NAME>TransferStart</SHORT-NAME>
+                          <ARGUMENTS>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="945bd78d-fa8c-3820-a31d-796f6869a0e2">
+                              <SHORT-NAME>size</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/stdtypes/UInt64</TYPE-TREF>
+                              <DIRECTION>IN</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                            <ARGUMENT-DATA-PROTOTYPE UUID="06084b4b-d7ee-3663-acf8-87c564b04f98">
+                              <SHORT-NAME>result</SHORT-NAME>
+                              <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ara/ucm/datatypes/implementationdatatypes/TransferStartReturnType</TYPE-TREF>
+                              <DIRECTION>OUT</DIRECTION>
+                            </ARGUMENT-DATA-PROTOTYPE>
+                          </ARGUMENTS>
+                          <FIRE-AND-FORGET>false</FIRE-AND-FORGET>
+                        </CLIENT-SERVER-OPERATION>
+                      </METHODS>
+                    </SERVICE-INTERFACE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE>
+                  <SHORT-NAME>processes</SHORT-NAME>
+                  <ELEMENTS>
+                    <PROCESS UUID="37b89733-61ad-3e7d-81b6-df1408c30ff9">
+                      <SHORT-NAME>PackageManager_instance</SHORT-NAME>
+                      <EXECUTABLE-REF DEST="EXECUTABLE">/ara/ucm/pkgmgr/exec/PackageManager_exe</EXECUTABLE-REF>
+                    </PROCESS>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE>
+                  <SHORT-NAME>swcs</SHORT-NAME>
+                  <ELEMENTS>
+                    <ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE UUID="d59e5fd4-c3d2-33ed-9a71-d009af725fcf">
+                      <SHORT-NAME>PackageManager</SHORT-NAME>
+                      <PORTS>
+                        <P-PORT-PROTOTYPE UUID="dcd7b5d5-1754-419f-bb59-142420803fa6">
+                          <SHORT-NAME>PackageManagement</SHORT-NAME>
+                          <PROVIDED-INTERFACE-TREF DEST="SERVICE-INTERFACE">/ara/ucm/pkgmgr/portinterfaces/PackageManagement</PROVIDED-INTERFACE-TREF>
+                        </P-PORT-PROTOTYPE>
+                      </PORTS>
+                    </ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE>
+                    <COMPOSITION-SW-COMPONENT-TYPE UUID="48d46730-d993-350d-8492-bba064fdadb2">
+                      <SHORT-NAME>ucm</SHORT-NAME>
+                      <COMPONENTS>
+                        <SW-COMPONENT-PROTOTYPE UUID="ad466432-a307-3ed6-8576-dac6db6bd05a">
+                          <SHORT-NAME>PackageManager</SHORT-NAME>
+                          <TYPE-TREF DEST="ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE">/ara/ucm/pkgmgr/swcs/PackageManager</TYPE-TREF>
+                        </SW-COMPONENT-PROTOTYPE>
+                      </COMPONENTS>
+                    </COMPOSITION-SW-COMPONENT-TYPE>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

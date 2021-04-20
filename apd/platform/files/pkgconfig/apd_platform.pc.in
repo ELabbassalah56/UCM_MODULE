@@ -1,0 +1,4 @@
+Name: apd_platform
+Version: @PROJECT_VERSION@
+Description: APD library providing IPC before ara::com starts
+Libs: -l apd_platform
