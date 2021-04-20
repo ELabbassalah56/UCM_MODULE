@@ -63,7 +63,9 @@ namespace ara
             using GetSwClusterInfoOutput = Skeleton::GetSwClusterInfoOutput;
             using GetSwPackagesOutput = Skeleton::GetSwPackagesOutput;
             using TransferStartOutput = Skeleton::TransferStartOutput;
-
+            using UCMInfoServiceOutput = Skeleton::UCMInfoServiceOutput;
+             
+            
             using ara::ucm::pkgmgr::ActivateOptionType;
             using ara::ucm::pkgmgr::ByteVectorType;
             using ara::ucm::pkgmgr::GeneralResponseType;
@@ -192,12 +194,12 @@ namespace ara
 
                 auto fun = [&](Promise<void> lambdaPromise) {
                     
-                 //  check dependency in State KAdded ,KUpdate ,KPresent
-                 
-                    for (const auto &indexSwclChIn : impl_->GetSwClusterChangeInfo())
+                //  //  check dependency in State KAdded ,KUpdate ,KPresent
+
+                     for (const auto &indexSwclChIn : impl_->GetSwClusterChangeInfo())
                     {
 
-
+                        std::cout<<"\t\t\t\t\n\n\n\n IM HERE MAN \t\t\t\t\n\n\n\n";
                             std::cout<<indexSwclChIn.Name<<std::endl; 
                             std::cout<<static_cast<uint8_t>(indexSwclChIn.State)<<std::endl; 
                             std::cout<<indexSwclChIn.Version<<std::endl; 
@@ -217,7 +219,7 @@ namespace ara
                         //     // }
                         // }
                     }
-                     
+
                     std::this_thread::sleep_for(std::chrono::seconds(1));
                     // inform the state that the action is complete
                     auto accessor = state_.Get();
@@ -279,7 +281,6 @@ namespace ara
                 auto accessor = state_.Get();
                 return accessor->Rollback(*this, accessor);
             }
-
             auto PackageManager::SetLogLevel(const TransferIdType &id, const LogLevelType &logLevel)
                 -> decltype(Skeleton::SetLogLevel(id, logLevel))
             {
@@ -321,7 +322,18 @@ namespace ara
             {
                 impl_->ResetSWCLChangeInfo();
             }
+            
+            Future<UCMInfoServiceOutput>  PackageManager::UCMInfoService() 
+            {
+                Promise<UCMInfoServiceOutput> promise;
+                UCMInfoServiceOutput out;
 
+                out.UCMInfo = impl_->UCMInfoService();
+
+                promise.set_value(out);
+                return promise.get_future();
+                
+            }
         } // namespace pkgmgr
     }     // namespace ucm
 } // namespace ara

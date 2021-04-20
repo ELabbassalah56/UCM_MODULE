@@ -82,6 +82,7 @@ PackageManagerImpl::~PackageManagerImpl() = default;
 
 Result<void> PackageManagerImpl::ProcessSoftwarePackage(Streamable& package)
 {
+    
 
 
     std::cout<<"\n\n\nProcessing SW PAkage INVOKE \n\n\n"<<std::endl;
@@ -104,10 +105,29 @@ Result<void> PackageManagerImpl::ProcessSoftwarePackage(Streamable& package)
     } catch (const exception::InvalidManifestException& e) {
         softwarePackageExtractor_->Cleanup();
         package.SetProcessProgressValue(100);
-        log_.LogWarn() << "Failed to parse the software package manifest";
+        log_.LogWarn() << "Software Package version is too old.";
         return Result<void>::FromError(UCMErrorDomainErrc::kInvalidManifest);
     }
 
+    //Check Version capability 
+    try
+    {
+        auto currAppVersion = softwarePackage->GetSoftwareCluster().GetSwclManifest().GetVersion().ToString();
+        
+        if(currAppVersion >= service_version.str)
+        {
+            throw currAppVersion;
+        }
+        
+    }
+    catch(const ara::core::String& e)
+    {
+       softwarePackageExtractor_->Cleanup();
+       package.SetProcessProgressValue(100);
+       log_.LogWarn() << "The version of the Software Package to be processed is not compatible with the current version of UCM."<<e;
+        return Result<void>::FromError(UCMErrorDomainErrc::kOldVersion);
+    }
+    
     
    
     if (InterruptibleThread::IsInterrupted()) {
@@ -185,6 +205,8 @@ Result<void> PackageManagerImpl::ProcessSoftwarePackage(Streamable& package)
       
         }
     }
+    
+    
 
     package.SetProcessProgressValue(75);
 
@@ -382,6 +404,20 @@ SwClusterInfoVectorType PackageManagerImpl::GetSwClusterInfo() const
 
     return out;
 }
+
+UCMInfoVectorOfStringType PackageManagerImpl::UCMInfoService() const
+{
+
+    UCMInfoVectorOfStringType out;
+    UCMInfoType ucmInfo;
+    ucmInfo.NAME = ucmInfo_->GetNameUcmInfo();
+    ucmInfo.Version = ucmInfo_->GetVersionUcmInfo();
+    ucmInfo.RELEASE = ucmInfo_->GetReleaseUcmInfo();
+    out.push_back(ucmInfo);
+
+    return out;
+}
+ 
 
 const SwClusterInfoVectorType& PackageManagerImpl::GetSwClusterChangeInfo() const
 {

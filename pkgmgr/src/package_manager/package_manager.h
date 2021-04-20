@@ -43,6 +43,7 @@
 
 #include "locked_ptr_wrapper.h"
 #include "ara/log/logging.h"
+#include "parsing/ucm_info.h"
 
 #include "ara/ucm/pkgmgr/packagemanagement_skeleton.h"
 
@@ -121,8 +122,7 @@ public:
     /// decltype it is just indector to the return type of function 
     /// when return type depend on type auto or template
     //end / /*@Abbas-Salah-gdb*/ 
-    auto Activate(const ActivateOptionType& option = ActivateOptionType::kDefault) -> decltype(Skeleton::Activate(option)) override;
-
+    auto Activate(const ActivateOptionType& option) -> decltype(Skeleton::Activate(option)) override;
     /// @brief Abort an ongoing processing of a Software Package.
     ///
     /// @param id Transfer ID of Software Package.
@@ -290,6 +290,13 @@ public:
     ///
     /// @returns nothing
     void ResetSwclChangeInfo();
+    /// @brief  ucm information 
+    ///
+    /// @returns 
+    Future<UCMInfoServiceOutput> UCMInfoService()  override;
+
+    
+
 private:
      /// @brief Logger for logging errors  by abbas 
     ara::log::Logger& log_{ara::log::CreateLogger("PKGM", "PackageManagerImpl context")};

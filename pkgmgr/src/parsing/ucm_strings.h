@@ -47,6 +47,19 @@ namespace ucm
 {
 namespace pkgmgr
 {
+    
+typedef struct constexpr_str {
+    char const* str;
+    std::size_t size;
+
+    // can only construct from a char[] literal
+    template <std::size_t N>
+    constexpr constexpr_str(char const (&s)[N])
+        : str(s)
+        , size(N - 1) // not count the trailing nul
+    {}
+}constexpr_str;
+
 const ara::core::String ActivationStringApplicationRestart = "ApplicationRestart";
 const ara::core::String ActivationStringSystemRestart = "SystemRestart";
 const ara::core::String actionStringUpdate = "Update";

@@ -6,7 +6,7 @@ namespace ara
     {
         namespace pkgmgr
         {
-            ucmParseInfo::ucmParseInfo(string P) : pathSpecFile{P}
+            ucmParseInfo::ucmParseInfo(ara::core::String P) : pathSpecFile{P}
             {
             }
 
@@ -14,7 +14,7 @@ namespace ara
             {
             }
 
-            bool ucmParseInfo::fGetFileContent(string fileName, std::vector<std::string> &vecOfStrs)
+            bool ucmParseInfo::fGetFileContent(ara::core::String fileName, vecString_t &vecOfStrs)
             {
                 // Open the File
                 std::ifstream in(fileName.c_str());
@@ -41,7 +41,7 @@ namespace ara
                 return true;
             }
 
-            vecString_t &ucmParseInfo::fParsSpecOfUcm(const vecString_t &vecOfString, const int argSize, char delim)
+            vecString_t &ucmParseInfo::fParsSpecOfUcm(const vecString_t &vecOfString, char delim)
             {
                 //data holder
                 static vecString_t holdOut;
@@ -71,7 +71,7 @@ namespace ara
                 bool result = fGetFileContent(pathSpecFile, vecOfStr);
                 if (result)
                 {
-                    tempData = fParsSpecOfUcm(vecOfStr, vecOfStr.size(), ':');
+                    tempData = fParsSpecOfUcm(vecOfStr,':');
                     for (int i = 0; i < tempData.size(); i++)
                     {
                         // holdData.push_back(simple_tokenizer(info));

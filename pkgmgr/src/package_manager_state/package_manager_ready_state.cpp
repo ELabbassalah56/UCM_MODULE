@@ -106,6 +106,7 @@ namespace ara
                                                             StateAccessor &accessor,
                                                             const ActivateOptionType &option)
             {
+                std::cout<<"\n\n\n\n READY STATE intilaized to convert to activate STATE\n\n\n\n\n\n";
                 accessor.Reset(std::make_unique<PackageManagerActivatingState>()); //Next state activating state
                 Promise<void> promise;
                 Future<void> future = promise.get_future();

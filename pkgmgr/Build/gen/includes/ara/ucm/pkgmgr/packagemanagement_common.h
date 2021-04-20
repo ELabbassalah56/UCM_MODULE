@@ -65,6 +65,8 @@ class PackageManagement {
  public:
   static constexpr ara::com::internal::ServiceId service_id = 0x3380;
   static constexpr ara::com::internal::ServiceVersion service_version = 0x01000000;
+  static constexpr ara::com::internal::ServiceVersionString service_version_in_string = "1.0.0";
+
   static constexpr ara::core::Array<ara::core::ErrorCode, 4> Activate_PossibleErrors =
   {
     ::ara::ucm::pkgmgr::MakeErrorCode(::ara::ucm::pkgmgr::UCMErrorDomainErrc::kErrorDuringActivation, 0),

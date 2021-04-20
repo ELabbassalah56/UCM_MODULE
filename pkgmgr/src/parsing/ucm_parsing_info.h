@@ -6,6 +6,7 @@
 #include <sstream>
 #include <string>
 #include <fstream>
+#include"ara/core/string.h"
 
 #define MAX_LINE_PARSER_NEEDED 6
 #define MIN_STRINGS_IN_LINE 0
@@ -24,12 +25,12 @@ namespace ara
             class ucmParseInfo
             {
             private:
-                string pathSpecFile;
-                bool fGetFileContent(string fileName, vecString_t &vecOfStrs);
-                vecString_t &fParsSpecOfUcm(const vecString_t &vecOfString, const int argSize, char delim);
+                ara::core::String pathSpecFile;
+                bool fGetFileContent(ara::core::String fileName, vecString_t &vecOfStrs);
+                vecString_t &fParsSpecOfUcm(const vecString_t &vecOfString, char delim);
 
             public:
-                ucmParseInfo(string P);
+                ucmParseInfo(ara::core::String P);
                 ~ucmParseInfo();
                 vecString_t ucmInfo();
             };

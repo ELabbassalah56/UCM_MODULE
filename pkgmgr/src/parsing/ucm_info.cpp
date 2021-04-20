@@ -1,5 +1,6 @@
 #include "parsing/ucm_info.h"
 
+
 namespace ara
 {
     namespace ucm
@@ -26,27 +27,27 @@ namespace ara
                 mGroup = mGetUcmInfo.ucmInfo().at(5).replace(0, 1, "");
             }
 
-            string ucminfo::GetSummaryUcmInfo()
+            ara::core::String ucminfo::GetSummaryUcmInfo()
             {
                 return mSummary;
             }
-            string ucminfo::GetNameUcmInfo()
+            ara::core::String ucminfo::GetNameUcmInfo()
             {
                 return mName;
             }
-            string ucminfo::GetVersionUcmInfo()
+            ara::core::String ucminfo::GetVersionUcmInfo()
             {
                 return mVersion;
             }
-            string ucminfo::GetReleaseUcmInfo()
+            ara::core::String ucminfo::GetReleaseUcmInfo()
             {
                 return mRelease;
             }
-            string ucminfo::GetLicenseUcmInfo()
+            ara::core::String ucminfo::GetLicenseUcmInfo()
             {
                 return mLicense;
             }
-            string ucminfo::GetGroupUcmInfo()
+            ara::core::String ucminfo::GetGroupUcmInfo()
             {
                 return mGroup;
             }

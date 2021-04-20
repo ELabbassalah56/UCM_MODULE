@@ -33,6 +33,12 @@
                         </SOMEIP-FIELD-DEPLOYMENT>
                       </FIELD-DEPLOYMENTS>
                       <METHOD-DEPLOYMENTS>
+                        <SOMEIP-METHOD-DEPLOYMENT UUID="7fd8126c-9f1a-11eb-a8b3-0242ac130003">
+                          <SHORT-NAME>UCMInfoService</SHORT-NAME>
+                          <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/UCMInfoService</METHOD-REF>
+                          <METHOD-ID>30180</METHOD-ID>
+                          <TRANSPORT-PROTOCOL>UDP</TRANSPORT-PROTOCOL>
+                        </SOMEIP-METHOD-DEPLOYMENT>
                         <SOMEIP-METHOD-DEPLOYMENT UUID="b78452dd-6a65-49b2-93d1-66fbf04c0da2">
                           <SHORT-NAME>Activate</SHORT-NAME>
                           <METHOD-REF DEST="CLIENT-SERVER-OPERATION">/ara/ucm/pkgmgr/portinterfaces/PackageManagement/Activate</METHOD-REF>

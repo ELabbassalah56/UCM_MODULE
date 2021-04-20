@@ -2,9 +2,11 @@
 #define ARA_UCM_PKGMGR_UCM_INFO_H
 
 #include "parsing/ucm_parsing_info.h"
+#include "ara/core/string.h"
+#include "ara/core/future.h"
 
 #include <iostream>
-#include <string>
+
 
 
 using namespace std;
@@ -19,29 +21,29 @@ namespace ara
             
             //remember update path to relative path
 
-            static string pathSpecFile = "/home/user/Desktop/GP_VALEO_AP/ara-project-R19-11/build/tmp/work/i586-poky-linux/ucm-package-manager/1.0-r1/ucm-package-manager.spec";
+            static ara::core::String pathSpecFile = "/usr/share/info/ucm-package-manager.spec";
 
             class ucminfo
             {
             private:
-                string mSummary;
-                string mName;
-                string mVersion;
-                string mRelease;
-                string mLicense;
-                string mGroup;
+                ara::core::String mSummary;
+                ara::core::String mName;
+                ara::core::String mVersion;
+                ara::core::String mRelease;
+                ara::core::String mLicense;
+                ara::core::String mGroup;
                 ucmParseInfo mGetUcmInfo{pathSpecFile};
                 void collectUcmData();
 
             public:
-                ucminfo();
+                ucminfo() ;
                 ~ucminfo();
-                string GetSummaryUcmInfo();
-                string GetNameUcmInfo();
-                string GetVersionUcmInfo();
-                string GetReleaseUcmInfo();
-                string GetLicenseUcmInfo();
-                string GetGroupUcmInfo();
+                ara::core::String GetSummaryUcmInfo();
+                ara::core::String GetNameUcmInfo();
+                ara::core::String GetVersionUcmInfo();
+                ara::core::String GetReleaseUcmInfo();
+                ara::core::String GetLicenseUcmInfo();
+                ara::core::String GetGroupUcmInfo();
             };
 
         } // namespace pkgmgr

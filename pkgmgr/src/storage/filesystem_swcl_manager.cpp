@@ -126,7 +126,6 @@ ara::core::Vector<SoftwareCluster> FileSystemSWCLManager::GetSWCLsForActivation(
             if ((swcl.GetSwclState() == SwClusterStateType::kPresent)
                 || (swcl.GetSwclState() == SwClusterStateType::kAdded)
                 || (swcl.GetSwclState() == SwClusterStateType::kUpdated)
-                || (swcl.GetSwclState() == SwClusterStateType::kRemoved)
                ) {
                 return true;
             } else {

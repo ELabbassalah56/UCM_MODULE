@@ -47,6 +47,7 @@
 #include "transfer/streamable_software_package_factory.h"
 
 #include "parsing/application.h"
+#include "parsing/ucm_strings.h"
 #include "parsing/software_package_parser.h"
 #include "extraction/software_package_extractor.h"
 
@@ -59,6 +60,8 @@
 #include "ara/core/promise.h"
 #include "ara/core/string.h"
 #include "ara/log/logging.h"
+#include "ara/ucm/pkgmgr/packagemanagement_common.h"
+
 
 #include "package_manager/package_manager.h"
 
@@ -79,6 +82,7 @@ using TransferDataFuture = ara::core::Future<void>;
 using TransferExitFuture = ara::core::Future<void>;
 using SwClusterInfoVectorType = ::ara::ucm::pkgmgr::SwClusterInfoVectorType;
 using DeleteTransferReturnType = ::ara::ucm::pkgmgr::GeneralResponseType;
+
 
 using ara::core::Result;
 using ara::core::ErrorCode;
@@ -166,7 +170,12 @@ public:
     ///
     /// @return List of Software Clusters's data
     virtual SwClusterInfoVectorType GetSwClusterInfo() const;
-
+    
+    /// @brief Retrieve a UCM data (name,version,Release)
+    ///
+    /// @return List of UCM's data
+    virtual UCMInfoVectorOfStringType UCMInfoService() const;
+    
     /// @brief Gets the software clusters change info vector
     ///
     /// @returns vector of software clusters info
@@ -211,8 +220,7 @@ public:
     /// @brief Internal trigger, which is provided for actions
     void RevertActions();
 
-    /// @brief Checking Dependencies of SWCluster
-    bool CheckUCMDependecies();
+   
 
 private:
     /// @brief Creates an absolute file path that is used as the target extraction directory,
@@ -265,6 +273,12 @@ private:
     std::unique_ptr<Application> appInfo_;
     /// @brief pointer to new software cluster input to ucm 
     std::unique_ptr<SoftwareCluster> swClInfo_;
+    /// @brief pointer to packagmangment to ucm
+    std::unique_ptr<PackageManagement> pkgCommon_; 
+    /// @brief Version of ucm Service 
+    static constexpr constexpr_str service_version = "1.0.0_0";
+    /// @brief pointer to ucm INFO
+    std::unique_ptr<ucminfo> ucmInfo_ = std::make_unique<ucminfo>() ;
 
 };
 }  // namespace pkgmgr
