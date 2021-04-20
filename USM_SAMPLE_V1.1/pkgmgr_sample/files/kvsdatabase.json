@@ -1,0 +1,9 @@
+[
+    {
+        "key": "VSOMEIP_APPLICATION_NAME",
+        "value": {
+            "string": "PackageManagerSample"
+        },
+        "checksum": 0
+    }
+]

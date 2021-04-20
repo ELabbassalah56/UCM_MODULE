@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ara</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>apd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>ucm_client</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>timing</SHORT-NAME>
+                  <ELEMENTS>
+                    <SOMEIP-SD-CLIENT-SERVICE-INSTANCE-CONFIG>
+                      <SHORT-NAME>SomeipClientServiceInstanceConfig</SHORT-NAME>
+                      <INITIAL-FIND-BEHAVIOR>
+                        <INITIAL-DELAY-MAX-VALUE>0.1</INITIAL-DELAY-MAX-VALUE>
+                        <INITIAL-DELAY-MIN-VALUE>0.01</INITIAL-DELAY-MIN-VALUE>
+                        <INITIAL-REPETITIONS-BASE-DELAY>0.2</INITIAL-REPETITIONS-BASE-DELAY>
+                        <INITIAL-REPETITIONS-MAX>3</INITIAL-REPETITIONS-MAX>
+                      </INITIAL-FIND-BEHAVIOR>
+                      <SERVICE-FIND-TIME-TO-LIVE>10</SERVICE-FIND-TIME-TO-LIVE>
+                    </SOMEIP-SD-CLIENT-SERVICE-INSTANCE-CONFIG>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

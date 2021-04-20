@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00047.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="5a8b9459-a58d-4ece-bf03-9aea1e55e9ca">
+      <SHORT-NAME>ara</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="f37e97cc-a702-4500-a63b-b18c4395dd72">
+          <SHORT-NAME>apd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="163e5e32-f8fa-4663-8c72-e8b009c45045">
+              <SHORT-NAME>ucm_client</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="d5f914f2-b860-4145-a7cf-87cccef4977b">
+                  <SHORT-NAME>mapping</SHORT-NAME>
+                  <ELEMENTS>
+                    <SOMEIP-SERVICE-INSTANCE-TO-MACHINE-MAPPING UUID="0c5cd8a3-684f-4768-966a-798625a29013">
+                      <SHORT-NAME>RequiredPackageManagementInstanceToMachineMapping</SHORT-NAME>
+                      <COMMUNICATION-CONNECTOR-REF DEST="ETHERNET-COMMUNICATION-CONNECTOR">/ara/apd/machines/DevelopmentMachineDesign/EthCommunicationConnector</COMMUNICATION-CONNECTOR-REF>
+                      <SERVICE-INSTANCE-REFS>
+                        <SERVICE-INSTANCE-REF DEST="REQUIRED-SOMEIP-SERVICE-INSTANCE">/ara/apd/ucm_client/instance/RequiredSomeIpPackageManagementInstance</SERVICE-INSTANCE-REF>
+                      </SERVICE-INSTANCE-REFS>
+                      <UDP-PORT>5000</UDP-PORT>
+                    </SOMEIP-SERVICE-INSTANCE-TO-MACHINE-MAPPING>
+                    <SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING UUID="46e1970e-54df-4008-babf-ef369903081d">
+                      <SHORT-NAME>RequiredPackageManagementInstanceToPortMapping</SHORT-NAME>
+                      <PORT-PROTOTYPE-IREF>
+                        <CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF DEST="ROOT-SW-COMPONENT-PROTOTYPE">/ara/apd/ucm_client/executables/pkgmgr_app/pkgmgr_app_root</CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF>
+                        <TARGET-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ara/apd/ucm_client/software_components/PackageManagerSample/PackageManagementRPort</TARGET-PORT-PROTOTYPE-REF>
+                      </PORT-PROTOTYPE-IREF>
+                      <PROCESS-REF DEST="PROCESS">/ara/apd/ucm_client/processes/pkgmgr_sample</PROCESS-REF>
+                      <SERVICE-INSTANCE-REF DEST="REQUIRED-SOMEIP-SERVICE-INSTANCE">/ara/apd/ucm_client/instance/RequiredSomeIpPackageManagementInstance</SERVICE-INSTANCE-REF>
+                    </SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

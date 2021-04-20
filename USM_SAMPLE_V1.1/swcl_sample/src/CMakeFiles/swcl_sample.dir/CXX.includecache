@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/Desktop/GP_VALEO_AP/ara-project-R19-11/sample-applications/ucm_examples/swcl_sample/src/main.cpp
+chrono
+-
+memory
+-
+thread
+-
+ara/core/string.h
+/home/user/Desktop/GP_VALEO_AP/ara-project-R19-11/sample-applications/ucm_examples/swcl_sample/src/ara/core/string.h
+ara/exec/execution_client.h
+/home/user/Desktop/GP_VALEO_AP/ara-project-R19-11/sample-applications/ucm_examples/swcl_sample/src/ara/exec/execution_client.h
+ara/log/logging.h
+/home/user/Desktop/GP_VALEO_AP/ara-project-R19-11/sample-applications/ucm_examples/swcl_sample/src/ara/log/logging.h
+ara/log/logmanager.h
+/home/user/Desktop/GP_VALEO_AP/ara-project-R19-11/sample-applications/ucm_examples/swcl_sample/src/ara/log/logmanager.h
+
