@@ -74,11 +74,9 @@ void PackageManagerTestSequence()
 {
     const ara::core::String testDataLocation = "/usr/share/apdtest/ucm/";
     const std::vector<ara::core::String> packages = {
-                                                          testDataLocation + "SWP_TEST1_INS.zip",
-                                                        //  testDataLocation + "SWP_TEST1_REM.zip",
-                                                        //  testDataLocation + "SWP_TEST1_INS (copy).zip",
-                                                        //  testDataLocation + "SWP_TEST1_INS (another copy).zip",
-                                                        //  testDataLocation + "SWP_TEST1_UPD.zip"
+                                                         testDataLocation + "SWP_TEST1_INS.zip",
+                                                         testDataLocation + "SWP_TEST1_REM.zip",
+                                                         testDataLocation + "SWP_TEST1_UPD.zip"
                                                     };
     bool integrationTestResult = false;
 
@@ -86,7 +84,7 @@ void PackageManagerTestSequence()
     ara::ucm::pkgmgrsample::ServiceProxyPtr service = nullptr;
     if (foundService)
     {
-        std::cout << "foundService" << std::endl;
+        std::cout << "foundService" <<foundService.has_value()<< std::endl;
         service = *foundService;
     }
     else
@@ -100,7 +98,7 @@ void PackageManagerTestSequence()
     PackageManagementApp<PackageManagementProxy> app;
     
     std::cout << "Package Managemnt App" << std::endl;
-
+    
     auto &logger = ara::log::CreateLogger("TEST", "Test Sequence context", ara::log::LogLevel::kVerbose);
 
     logger.LogInfo() << "Created PackageManagementApp";
@@ -177,7 +175,7 @@ void PackageManagerTestSequence()
         if (!integrationTestResult)
         {
             std::cout<<"Rollback application"<<std::endl;
-             
+                     
             integrationTestResult = app.Rollback();
             app.cond.wait_for(lck, std::chrono::milliseconds(10000), [&] {
                 return app.IsCorrectStatus(ara::ucm::pkgmgr::PackageManagerStatusType::kRolledBack);
@@ -192,23 +190,37 @@ void PackageManagerTestSequence()
         });
     }
 
- 
+    
+    // calling UCM information
+     int i = 0;
+    std::cout<<"Calling UCM Info "<< service->UCMInfoService().get().UCMInfo.size()<<std::endl;
+     for (auto info : service->UCMInfoService().get().UCMInfo)
+      {
+         logger.LogWarn() << "Element[" << i << "]"
+                     << "UCM Name: " << info.NAME;
+
+         std::cout << info.NAME << std::endl;
+         std::cout << info.Version << std::endl;
+         std::cout << info.RELEASE << std::endl;
+         logger.LogWarn() << "Element[" << i << "]"
+                          << "Version: " << info.Version;
+         logger.LogWarn() << "Element[" << i << "]"
+                          << "Release: " << info.RELEASE;
+          i++;
+      } 
+      if (i == 0)
+      {
+         logger.LogWarn() << "No UCM Info";
+      }
 
     // calling GetSwClusterInfo
     std::cout << "Calling GetSWClusterInfo "<< service->GetSwClusterInfo().get().SwInfo.size()<< std::endl;
 
     int index = 0;
+   
     for (auto info : service->GetSwClusterInfo().get().SwInfo)
     {
-        logger.LogWarn() << "Element[" << index << "]"
-                         << "SwInfoName: " << info.Name;
-
-        std::cout << info.Name << std::endl;
-
-        std::cout << info.Version << std::endl;
-
-        logger.LogWarn() << "Element[" << index << "]"
-                         << "Version: " << info.Version;
+       
         logger.LogWarn() << "Element[" << index << "]"
                          << "SwClusterStateType: " << [=](ara::ucm::pkgmgr::SwClusterStateType state) {
                                 switch (state)
@@ -228,12 +240,17 @@ void PackageManagerTestSequence()
                             }(info.State);
         index++;
     }
+
+     
+    
     if (index == 0)
     {
         logger.LogWarn() << "No SwClusterInfo";
     }
 
     ReportIntegrationTestResult(integrationTestResult);
+
+    
 }
 
 int main(int, char **)
