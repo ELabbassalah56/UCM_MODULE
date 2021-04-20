@@ -72,8 +72,14 @@ public:
     /// @uptrace{SWS_UCM_00030}
     virtual ara::core::Vector<SwClusterInfoType> GetSwClusterChangeInfo() = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     
+=======
+    
+
+
+>>>>>>> bf25fabc8941baef3e8d8669df567de6c3a608ef
 =======
     
 

@@ -1,7 +1,10 @@
 #include "parsing/ucm_info.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> bf25fabc8941baef3e8d8669df567de6c3a608ef
 =======
 >>>>>>> bf25fabc8941baef3e8d8669df567de6c3a608ef
 namespace ara
@@ -31,6 +34,7 @@ namespace ara
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             ara::core::String ucminfo::GetSummaryUcmInfo()
             {
                 return mSummary;
@@ -53,6 +57,8 @@ namespace ara
             }
             ara::core::String ucminfo::GetGroupUcmInfo()
 =======
+=======
+>>>>>>> bf25fabc8941baef3e8d8669df567de6c3a608ef
             string ucminfo::GetSummaryUcmInfo()
             {
                 return mSummary;
@@ -74,6 +80,9 @@ namespace ara
                 return mLicense;
             }
             string ucminfo::GetGroupUcmInfo()
+<<<<<<< HEAD
+>>>>>>> bf25fabc8941baef3e8d8669df567de6c3a608ef
+=======
 >>>>>>> bf25fabc8941baef3e8d8669df567de6c3a608ef
             {
                 return mGroup;

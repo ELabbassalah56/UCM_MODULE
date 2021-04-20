@@ -7,7 +7,11 @@ namespace ara
         namespace pkgmgr
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             ucmParseInfo::ucmParseInfo(ara::core::String P) : pathSpecFile{P}
+=======
+            ucmParseInfo::ucmParseInfo(string P) : pathSpecFile{P}
+>>>>>>> bf25fabc8941baef3e8d8669df567de6c3a608ef
 =======
             ucmParseInfo::ucmParseInfo(string P) : pathSpecFile{P}
 >>>>>>> bf25fabc8941baef3e8d8669df567de6c3a608ef
@@ -19,7 +23,11 @@ namespace ara
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             bool ucmParseInfo::fGetFileContent(ara::core::String fileName, vecString_t &vecOfStrs)
+=======
+            bool ucmParseInfo::fGetFileContent(string fileName, std::vector<std::string> &vecOfStrs)
+>>>>>>> bf25fabc8941baef3e8d8669df567de6c3a608ef
 =======
             bool ucmParseInfo::fGetFileContent(string fileName, std::vector<std::string> &vecOfStrs)
 >>>>>>> bf25fabc8941baef3e8d8669df567de6c3a608ef
@@ -50,7 +58,11 @@ namespace ara
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             vecString_t &ucmParseInfo::fParsSpecOfUcm(const vecString_t &vecOfString, char delim)
+=======
+            vecString_t &ucmParseInfo::fParsSpecOfUcm(const vecString_t &vecOfString, const int argSize, char delim)
+>>>>>>> bf25fabc8941baef3e8d8669df567de6c3a608ef
 =======
             vecString_t &ucmParseInfo::fParsSpecOfUcm(const vecString_t &vecOfString, const int argSize, char delim)
 >>>>>>> bf25fabc8941baef3e8d8669df567de6c3a608ef
@@ -84,7 +96,11 @@ namespace ara
                 if (result)
                 {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     tempData = fParsSpecOfUcm(vecOfStr,':');
+=======
+                    tempData = fParsSpecOfUcm(vecOfStr, vecOfStr.size(), ':');
+>>>>>>> bf25fabc8941baef3e8d8669df567de6c3a608ef
 =======
                     tempData = fParsSpecOfUcm(vecOfStr, vecOfStr.size(), ':');
 >>>>>>> bf25fabc8941baef3e8d8669df567de6c3a608ef

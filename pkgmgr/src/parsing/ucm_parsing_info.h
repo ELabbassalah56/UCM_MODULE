@@ -7,7 +7,10 @@
 #include <string>
 #include <fstream>
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include"ara/core/string.h"
+=======
+>>>>>>> bf25fabc8941baef3e8d8669df567de6c3a608ef
 =======
 >>>>>>> bf25fabc8941baef3e8d8669df567de6c3a608ef
 
@@ -29,6 +32,7 @@ namespace ara
             {
             private:
 <<<<<<< HEAD
+<<<<<<< HEAD
                 ara::core::String pathSpecFile;
                 bool fGetFileContent(ara::core::String fileName, vecString_t &vecOfStrs);
                 vecString_t &fParsSpecOfUcm(const vecString_t &vecOfString, char delim);
@@ -36,12 +40,17 @@ namespace ara
             public:
                 ucmParseInfo(ara::core::String P);
 =======
+=======
+>>>>>>> bf25fabc8941baef3e8d8669df567de6c3a608ef
                 string pathSpecFile;
                 bool fGetFileContent(string fileName, vecString_t &vecOfStrs);
                 vecString_t &fParsSpecOfUcm(const vecString_t &vecOfString, const int argSize, char delim);
 
             public:
                 ucmParseInfo(string P);
+<<<<<<< HEAD
+>>>>>>> bf25fabc8941baef3e8d8669df567de6c3a608ef
+=======
 >>>>>>> bf25fabc8941baef3e8d8669df567de6c3a608ef
                 ~ucmParseInfo();
                 vecString_t ucmInfo();
