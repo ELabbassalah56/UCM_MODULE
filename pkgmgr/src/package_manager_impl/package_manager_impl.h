@@ -220,6 +220,11 @@ public:
     /// @brief Internal trigger, which is provided for actions
     void RevertActions();
 
+    /// @brief function to compare two version if less than zero then v1 is samller than v2 and 
+    ///        if the return is more than zero  then v2 is smaller than v1
+    int versionCompare(ara::core::String& v1, ara::core::String& v2);
+
+
    
 
 private:
@@ -276,7 +281,7 @@ private:
     /// @brief pointer to packagmangment to ucm
     std::unique_ptr<PackageManagement> pkgCommon_; 
     /// @brief Version of ucm Service 
-    static constexpr constexpr_str service_version = "1.0.0_0";
+    ara::core::String ucmServiceVersion = "1.0.0";
     /// @brief pointer to ucm INFO
     std::unique_ptr<ucminfo> ucmInfo_ = std::make_unique<ucminfo>() ;
 

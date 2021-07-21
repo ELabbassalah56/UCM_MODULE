@@ -105,16 +105,17 @@ Result<void> PackageManagerImpl::ProcessSoftwarePackage(Streamable& package)
     } catch (const exception::InvalidManifestException& e) {
         softwarePackageExtractor_->Cleanup();
         package.SetProcessProgressValue(100);
-        log_.LogWarn() << "Software Package version is too old.";
+        log_.LogWarn() << "Invalid Manifest.";
         return Result<void>::FromError(UCMErrorDomainErrc::kInvalidManifest);
     }
 
-    //Check Version capability 
+    //Check Version Of Software Cluster 
     try
     {
         auto currAppVersion = softwarePackage->GetSoftwareCluster().GetSwclManifest().GetVersion().ToString();
-        
-        if(currAppVersion >= service_version.str)
+        auto prevAppVersion = softwarePackage->GetSoftwareCluster().GetSwclManifest().GetPreviousVersion().ToString();
+             
+        if(versionCompare(currAppVersion,prevAppVersion) < 0)
         {
             throw currAppVersion;
         }
@@ -124,8 +125,27 @@ Result<void> PackageManagerImpl::ProcessSoftwarePackage(Streamable& package)
     {
        softwarePackageExtractor_->Cleanup();
        package.SetProcessProgressValue(100);
-       log_.LogWarn() << "The version of the Software Package to be processed is not compatible with the current version of UCM."<<e;
+       log_.LogWarn() << "The version of the Software Cluster is smaller than previous version."<<e;
         return Result<void>::FromError(UCMErrorDomainErrc::kOldVersion);
+    }
+
+    //Check Version of Software Cluster is Compatabile with Current UCM 
+    try
+    {
+        auto ucmDepend = softwarePackage->GetManifest().GetMinUCMSupportedVersion().ToString();
+        auto ucmVer = ucmServiceVersion;
+        if(versionCompare(ucmDepend,ucmVer) < 0)
+        {
+            throw ucmDepend;
+        }
+        
+    }
+    catch(const ara::core::String& e)
+    {
+       softwarePackageExtractor_->Cleanup();
+       package.SetProcessProgressValue(100);
+       log_.LogWarn() << "The version of the Software Cluster is in compatible wtih UCM version."<<e;
+        return Result<void>::FromError(UCMErrorDomainErrc::kIncompatiblePackageVersion);
     }
     
     
@@ -550,6 +570,45 @@ void PackageManagerImpl::RevertActions()
 void PackageManagerImpl::ResetSWCLChangeInfo()
 {
     SWCLManager_->ResetSWCLChangeInfo();
+}
+
+int PackageManagerImpl::versionCompare(ara::core::String& v1, ara::core::String& v2)
+{
+    // vnum stores each numeric
+    // part of version
+    int vnum1 = 0, vnum2 = 0;
+    ara::core::String::iterator it1 = v1.begin();
+    ara::core::String::iterator it2 = v2.begin();
+    // loop until both string are
+    // processed
+    for (it1 , it2; (it1 != v1.end()
+                            || it2 != v2.end());) {
+        // storing numeric part of
+        // version 1 in vnum1
+        while (it1 != v1.end() && *it1 != '.') {
+            vnum1 = vnum1 * 10 + (*it1 - '0');
+            it1++;
+        }
+ 
+        // storing numeric part of
+        // version 2 in vnum2
+        while (it2 != v2.end() && *it2 != '.') {
+            vnum2 = vnum2 * 10 + (*it2 - '0');
+            it2++;
+        }
+ 
+        if (vnum1 > vnum2)
+            return 1;
+        if (vnum2 > vnum1)
+            return -1;
+ 
+        // if equal, reset variables and
+        // go for next numeric part
+        vnum1 = vnum2 = 0;
+        it1++;
+        it2++;
+    }
+    return 0;
 }
 
 }  // namespace pkgmgr
